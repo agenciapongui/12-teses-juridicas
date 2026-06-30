@@ -66,6 +66,14 @@ strong{font-weight:700;color:var(--ink);}
   align-items:center;justify-content:center;gap:8px;background:#fff;color:var(--accent);font-size:12px;letter-spacing:.12em;text-transform:uppercase;
   font-weight:700;text-align:center;padding:22px;}
 .prodph .sub{color:var(--muted);font-weight:500;letter-spacing:.02em;text-transform:none;font-size:12.5px;}
+/* before / after lawyer cards */
+.ba-grid{display:grid;gap:14px;margin-top:26px;max-width:680px;margin-left:auto;margin-right:auto;}
+@media(min-width:600px){.ba-grid{grid-template-columns:1fr 1fr;}}
+.ba-card{text-align:center;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;}
+.ba-label{display:block;font-weight:700;font-size:14px;color:#fff;padding:12px 12px;line-height:1.3;}
+.ba-label.bad{background:var(--accent2);}
+.ba-label.good{background:var(--green2);}
+.ba-img{width:100%;display:block;}
 /* CTA */
 .cta{display:flex;flex-direction:column;align-items:center;width:100%;max-width:480px;margin:6px auto;background:var(--green);color:#fff;text-align:center;
   font-weight:800;font-size:clamp(17px,4.6vw,20px);padding:21px 26px;border-radius:16px;text-decoration:none;box-shadow:0 12px 28px rgba(76,138,44,.32);transition:transform .12s;}
@@ -75,7 +83,8 @@ strong{font-weight:700;color:var(--ink);}
 /* cards / proofs */
 .proofs{display:grid;gap:16px;margin-top:6px;}
 @media(min-width:600px){.proofs{grid-template-columns:1fr 1fr;}}
-.proof{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 22px;box-shadow:0 8px 22px rgba(0,0,0,.04);}
+.proof{background:none;border:none;padding:0;border-radius:14px;overflow:hidden;box-shadow:0 8px 22px rgba(0,0,0,.06);}
+.proof img{display:block;width:100%;border-radius:14px;}
 .proof .q{font-size:15.5px;color:#39362f;line-height:1.5;text-align:left;}
 .proof .tag{margin-top:14px;font-size:12px;font-weight:700;letter-spacing:.03em;color:var(--green2);text-transform:uppercase;}
 .proof .tag:before{content:"✓ ";}
@@ -97,8 +106,9 @@ ul.arrow li:before{content:"→";color:var(--accent);}
 .opt.good{border:2px solid var(--accent);background:#fff7f0;}
 .opt.good .t{color:var(--accent2);}
 /* author */
-.author{display:flex;gap:20px;align-items:center;max-width:560px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;}
-.author .photo{flex:0 0 100px;width:100px;height:100px;border-radius:14px;background:var(--bg);border:2px dashed var(--accent);display:flex;align-items:center;justify-content:center;text-align:center;font-size:11px;color:var(--accent);font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:6px;}
+.author{display:flex;gap:24px;align-items:center;max-width:580px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;}
+@media (max-width:520px){.author{flex-direction:column;text-align:center;}}
+.author .photo{flex:0 0 160px;width:160px;height:160px;border-radius:16px;background:var(--bg);border:2px dashed var(--accent);display:flex;align-items:center;justify-content:center;text-align:center;font-size:11px;color:var(--accent);font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:6px;overflow:hidden;}
 .author p{text-align:left;margin:0;font-size:15px;color:#4a463d;}
 .author h3{font-size:20px;color:var(--ink);margin-bottom:6px;font-weight:700;}
 /* faq */
@@ -129,6 +139,22 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
     <div class="center-flex"><div class="pill">As teses que quase ninguém está anunciando</div></div>
     <!-- PLACEHOLDER: troque pela imagem/mockup do produto -->
     <div class="prodph"><span style="font-size:30px;line-height:1;">&#9670;</span>Imagem do produto<span class="sub">(você vai criar — placeholder)</span></div>
+  </div>
+</section>
+
+<!-- BEFORE/AFTER LAWYER -->
+<section style="padding-top:30px;padding-bottom:10px;">
+  <div class="wrap">
+    <div class="ba-grid">
+      <div class="ba-card">
+        <span class="ba-label bad">Disputando a mesma tese saturada</span>
+        <img class="ba-img" src="hero-01.jpg" alt="Sem saber qual tese anunciar" loading="lazy" decoding="async">
+      </div>
+      <div class="ba-card">
+        <span class="ba-label good">Com uma das 12 teses esquecidas</span>
+        <img class="ba-img" src="hero-02.jpg" alt="Com a tese certa em mãos" loading="lazy" decoding="async">
+      </div>
+    </div>
   </div>
 </section>
 
