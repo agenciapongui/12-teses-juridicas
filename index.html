@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Preconnects para reduzir tempo do Pixel disparar -->
+<link rel="preconnect" href="https://connect.facebook.net" crossorigin>
+<link rel="preconnect" href="https://www.facebook.com" crossorigin>
+<link rel="dns-prefetch" href="https://pay.hotmart.com">
+<link rel="dns-prefetch" href="https://static.hotmart.com">
+<title>As 12 Teses Jurídicas Esquecidas — Daniel Padilha</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ECE9E3; --bg2:#F6F4F0; --ink:#2c2a26; --soft:#5d5950;
+  --accent:#E07B2E; --accent2:#C25A22; --green:#5FA23A; --green2:#4c8a2c;
+  --muted:#938c80; --line:#dcd7cd; --dark:#171512;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:"Poppins",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased;}
+.wrap{width:100%;max-width:720px;margin:0 auto;padding:0 24px;}
+section{padding:46px 0;}
+.brandbar{text-align:center;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent2);font-weight:700;margin-bottom:30px;}
+.brandbar .d{color:var(--accent);}
+h1{font-weight:500;font-size:clamp(26px,6.2vw,40px);line-height:1.22;text-align:center;color:#403c36;letter-spacing:-.01em;}
+h1 b{font-weight:800;color:var(--ink);}
+h1 .o{font-weight:800;color:var(--accent);}
+h2{font-weight:700;font-size:clamp(22px,5.2vw,31px);line-height:1.25;text-align:center;color:var(--ink);margin-bottom:22px;letter-spacing:-.01em;}
+h2 .o{color:var(--accent);}
+p{font-size:clamp(15px,4vw,17px);color:var(--soft);text-align:center;margin-bottom:14px;}
+.left p, .left h2{text-align:left;}
+strong{font-weight:700;color:var(--ink);}
+.pill{display:inline-flex;align-items:center;gap:8px;margin:24px auto 0;background:#fff;border:1px solid var(--line);border-radius:40px;
+  padding:13px 26px;font-weight:700;color:var(--accent2);font-size:clamp(14px,3.8vw,16px);box-shadow:0 6px 18px rgba(0,0,0,.05);}
+.center-flex{display:flex;justify-content:center;}
+/* product placeholder */
+.prodph{margin:34px auto 0;max-width:340px;min-height:230px;border:2px dashed var(--accent);border-radius:18px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:8px;background:#fff;color:var(--accent);font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+  font-weight:700;text-align:center;padding:22px;}
+.prodph .sub{color:var(--muted);font-weight:500;letter-spacing:.02em;text-transform:none;font-size:12.5px;}
+/* CTA */
+.cta{display:flex;flex-direction:column;align-items:center;width:100%;max-width:480px;margin:6px auto;background:var(--green);color:#fff;text-align:center;
+  font-weight:800;font-size:clamp(17px,4.6vw,20px);padding:21px 26px;border-radius:16px;text-decoration:none;box-shadow:0 12px 28px rgba(76,138,44,.32);transition:transform .12s;}
+.cta:active{transform:scale(.99);}
+.cta small{font-weight:500;font-size:13px;opacity:.92;margin-top:3px;}
+.trust{text-align:center;font-size:13px;color:var(--muted);margin-top:14px;}
+/* cards / proofs */
+.proofs{display:grid;gap:16px;margin-top:6px;}
+@media(min-width:600px){.proofs{grid-template-columns:1fr 1fr;}}
+.proof{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 22px;box-shadow:0 8px 22px rgba(0,0,0,.04);}
+.proof .q{font-size:15.5px;color:#39362f;line-height:1.5;text-align:left;}
+.proof .tag{margin-top:14px;font-size:12px;font-weight:700;letter-spacing:.03em;color:var(--green2);text-transform:uppercase;}
+.proof .tag:before{content:"✓ ";}
+.note{font-size:13px;color:var(--accent2);background:#fff;border:1px dashed var(--accent);border-radius:10px;padding:11px 16px;margin-top:20px;text-align:center;}
+/* list */
+ul{list-style:none;max-width:520px;margin:6px auto;}
+li{position:relative;padding-left:34px;margin-bottom:15px;font-size:clamp(15px,4vw,17px);color:#3a372f;text-align:left;}
+li:before{content:"✓";position:absolute;left:0;top:-1px;color:var(--green2);font-weight:800;font-size:19px;}
+ul.arrow li:before{content:"→";color:var(--accent);}
+/* anchor */
+.price-strike{text-decoration:line-through;color:var(--muted);}
+.bignum{font-weight:800;font-size:clamp(52px,15vw,84px);color:var(--accent);line-height:1;text-align:center;margin:8px 0;}
+/* options */
+.opts{display:grid;gap:16px;margin:22px auto;max-width:560px;}
+@media(min-width:600px){.opts{grid-template-columns:1fr 1fr;}}
+.opt{border-radius:16px;padding:22px;background:#fff;border:1px solid var(--line);}
+.opt .t{font-weight:700;font-size:14px;margin-bottom:10px;color:var(--muted);}
+.opt p{text-align:left;font-size:15px;margin:0;color:#4a463d;}
+.opt.good{border:2px solid var(--accent);background:#fff7f0;}
+.opt.good .t{color:var(--accent2);}
+/* author */
+.author{display:flex;gap:20px;align-items:center;max-width:560px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;}
+.author .photo{flex:0 0 100px;width:100px;height:100px;border-radius:14px;background:var(--bg);border:2px dashed var(--accent);display:flex;align-items:center;justify-content:center;text-align:center;font-size:11px;color:var(--accent);font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:6px;}
+.author p{text-align:left;margin:0;font-size:15px;color:#4a463d;}
+.author h3{font-size:20px;color:var(--ink);margin-bottom:6px;font-weight:700;}
+/* faq */
+.faq{max-width:580px;margin:0 auto;}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:12px;}
+summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;gap:12px;color:var(--ink);}
+summary::-webkit-details-marker{display:none;}
+summary:after{content:"+";color:var(--accent);font-weight:800;font-size:22px;line-height:1;}
+details[open] summary:after{content:"–";}
+details p{text-align:left;margin:12px 0 0;font-size:15px;}
+/* dark cta band */
+.band{background:var(--dark);color:#f0ece4;border-radius:0;}
+.band h2{color:#fff;}
+.band p{color:#bdb6aa;}
+footer{background:var(--dark);color:#8d8676;font-size:13px;padding:38px 0;text-align:center;line-height:1.7;}
+footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:12px;margin-bottom:12px;}
+.disc{font-size:11.5px;color:#615b50;margin-top:16px;line-height:1.6;}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section style="padding-top:38px;">
+  <div class="wrap">
+    <div class="brandbar"><span class="d">&#9670;</span> Daniel Padilha · Tráfego para Advogados</div>
+    <h1>Descubra as <b>12 teses jurídicas</b> que mais <span class="o">fecham contrato</span> — as de <b>menor concorrência</b> e maior lucro.</h1>
+    <p style="margin-top:18px;font-size:clamp(15px,4vw,18px);">Atualizadas 2026. Copie a tese certa e pare de anunciar no escuro.</p>
+    <div class="center-flex"><div class="pill">As teses que quase ninguém está anunciando</div></div>
+    <!-- PLACEHOLDER: troque pela imagem/mockup do produto -->
+    <div class="prodph"><span style="font-size:30px;line-height:1;">&#9670;</span>Imagem do produto<span class="sub">(você vai criar — placeholder)</span></div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section style="background:var(--bg2);">
+  <div class="wrap">
+    <h2>Resultados reais de quem parou de <span class="o">anunciar no escuro</span>.</h2>
+    <div class="proofs">
+      <div class="proof"><img src="hero-03.jpg" alt="Depoimento de cliente" loading="lazy" decoding="async" style="width:100%;border-radius:10px;display:block;"></div>
+      <div class="proof"><img src="hero-04.jpg" alt="Depoimento de cliente" loading="lazy" decoding="async" style="width:100%;border-radius:10px;display:block;"></div>
+      <div class="proof"><img src="hero-05.jpg" alt="Depoimento de cliente" loading="lazy" decoding="async" style="width:100%;border-radius:10px;display:block;"></div>
+      <div class="proof"><img src="hero-06.jpg" alt="Depoimento de cliente" loading="lazy" decoding="async" style="width:100%;border-radius:10px;display:block;"></div>
+    </div>
+    </div>
+</section>
+
+<!-- DOR -->
+<section>
+  <div class="wrap">
+    <h2>Você anuncia, gasta, e só vem <span class="o">curioso que não fecha</span>.</h2>
+    <p>E no fundo bate aquela desconfiança: <em>“será que é a minha tese que não converte… ou todo mundo já está anunciando ela?”</em></p>
+  </div>
+</section>
+
+<!-- TRANSIÇÃO -->
+<section style="background:var(--bg2);">
+  <div class="wrap">
+    <h2>Na maioria das vezes, não é o tráfego. <span class="o">É a tese.</span></h2>
+    <p>Você está disputando a <strong>mesma tese saturada</strong> que dezenas de escritórios já rodam — pagando caro pelo mesmo clique. E se você soubesse, antes de gastar mais um real, <strong>quais teses fecham contrato com pouca concorrência?</strong></p>
+  </div>
+</section>
+
+<!-- O QUE RECEBE -->
+<section>
+  <div class="wrap">
+    <h2>As 12 teses, prontas pra você <span class="o">escolher e anunciar</span>.</h2>
+    <ul class="arrow">
+      <li>As <strong>12 teses jurídicas esquecidas</strong>, uma por página.</li>
+      <li>Por que cada uma é <strong>lucrativa</strong> e tem <strong>pouca concorrência</strong> hoje.</li>
+      <li>O <strong>ângulo de dor do cliente final</strong> — pra você anunciar na língua dele.</li>
+      <li><strong>Bônus:</strong> as mais lucrativas destacadas + tudo atualizado para <strong>2026</strong>.</li>
+    </ul>
+    <p style="max-width:520px;margin:18px auto 0;font-size:15px;">Não é curso, não tem aula chata. Você abre, acha a sua tese e já sobe o anúncio.</p>
+  </div>
+</section>
+
+<!-- PARA QUEM SERVE -->
+<section style="background:var(--bg2);">
+  <div class="wrap">
+    <h2>As 12 Teses são pra você que:</h2>
+    <ul>
+      <li>Roda (ou quer rodar) anúncio e <strong>não sabe qual tese anunciar</strong>.</li>
+      <li>Cansou de concorrer na <strong>mesma tese lotada</strong> de escritório.</li>
+      <li>Quer <strong>cliente que assina contrato</strong>, não curioso que some.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ANCORAGEM + CTA 1 -->
+<section>
+  <div class="wrap">
+    <p>Uma consultoria pra escolher tese custa <span class="price-strike">centenas de reais</span>.</p>
+    <div class="bignum">R$ 67</div>
+    <p style="margin-bottom:26px;">12 teses validadas, à vista. Acesso imediato.</p>
+    <!-- SUBSTITUA href="#comprar" pelo link do checkout do Hotmart -->
+    <a class="cta" href="#comprar">Quero as 12 teses agora <small>Acesso imediato no seu e-mail</small></a>
+    <div class="trust">🔒 Compra 100% segura · garantia incondicional de 7 dias</div>
+  </div>
+</section>
+
+<!-- CONVERSA SÉRIA -->
+<section style="background:var(--bg2);">
+  <div class="wrap">
+    <h2>Agora você tem <span class="o">duas opções</span>.</h2>
+    <div class="opts">
+      <div class="opt"><div class="t">Opção 1</div><p>Continuar na mesma tese lotada de concorrente, pagando caro pelo clique e torcendo pra fechar.</p></div>
+      <div class="opt good"><div class="t">Opção 2 — a inteligente</div><p>Por R$ 67, ver as 12 teses que quase ninguém roda — e escolher onde tem demanda e pouca briga.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTORIDADE -->
+<section>
+  <div class="wrap">
+    <div class="author">
+      <div class="photo" style="border:none;padding:0;background:none;overflow:hidden;"><img src="hero-09.jpg" alt="Daniel Padilha" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;border-radius:14px;"></div>
+      <div>
+        <h3>Daniel Padilha</h3>
+        <p>Há mais de 4 anos eu rodo tráfego pago focado em uma coisa só: <strong>advocacia</strong>. Estas teses saem das contas reais que a minha agência opera — não de achismo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA 2 (band escuro) -->
+<section class="band">
+  <div class="wrap">
+    <h2>12 teses. R$ 67. Acesso na hora.</h2>
+    <p style="margin-bottom:24px;">Pare de anunciar no escuro.</p>
+    <a class="cta" href="#comprar">Quero as 12 teses por R$ 67</a>
+    <div class="trust" style="color:#9a9384;">🔒 Compra 100% segura · garantia de 7 dias · acesso imediato</div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap">
+    <h2>Perguntas frequentes</h2>
+    <div class="faq">
+      <details><summary>Serve para a minha área do Direito?</summary><p>Sim. São 12 teses de áreas variadas, justamente pra você achar a que combina com o seu escritório.</p></details>
+      <details><summary>Como eu recebo?</summary><p>Acesso imediato no seu e-mail logo após a compra. Material digital, abre no celular ou no computador.</p></details>
+      <details><summary>Preciso saber de tráfego pago?</summary><p>Não. As teses já vêm com o porquê e o ângulo pronto. Você escolhe e anuncia — sem virar especialista.</p></details>
+      <details><summary>E se não for pra mim?</summary><p>Garantia incondicional de 7 dias. Se não fizer sentido, é só pedir e devolvemos cada centavo.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fl">&#9670; Daniel Padilha · Tráfego para Advogados</div>
+    <div>danielpadilha@pongui.com.br · CNPJ 47.143.662/0001-84</div>
+    <div class="disc">Este site não é afiliado ao Facebook/Meta nem ao Google e não representa nenhuma dessas empresas. A compra deste material não garante nenhum tipo de resultado; os resultados dependem da aplicação de cada um. Conteúdo proprietário · uso individual.<br>Copyright © Daniel Padilha · 2026 — Todos os direitos reservados.</div>
+  </div>
+</footer>
+
+</body>
+</html>
