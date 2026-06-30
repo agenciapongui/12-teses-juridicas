@@ -9,6 +9,30 @@
 <link rel="preconnect" href="https://www.facebook.com" crossorigin>
 <link rel="dns-prefetch" href="https://pay.hotmart.com">
 <link rel="dns-prefetch" href="https://static.hotmart.com">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','2258621204527940');
+fbq('track','PageView');
+fbq('track','ViewContent',{
+  content_name:'As 12 Teses Juridicas Esquecidas',
+  content_ids:['TESES12-TBD'],
+  content_type:'product',
+  value:67.00,
+  currency:'BRL'
+});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2258621204527940&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+
 <title>As 12 Teses Jurídicas Esquecidas — Daniel Padilha</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -170,7 +194,7 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
     <div class="bignum">R$ 67</div>
     <p style="margin-bottom:26px;">12 teses validadas, à vista. Acesso imediato.</p>
     <!-- SUBSTITUA href="#comprar" pelo link do checkout do Hotmart -->
-    <a class="cta" href="#comprar">Quero as 12 teses agora <small>Acesso imediato no seu e-mail</small></a>
+    <a class="cta" href="#" onclick="pgCheckout(event)">Quero as 12 teses agora <small>Acesso imediato no seu e-mail</small></a>
     <div class="trust">🔒 Compra 100% segura · garantia incondicional de 7 dias</div>
   </div>
 </section>
@@ -204,7 +228,7 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
   <div class="wrap">
     <h2>12 teses. R$ 67. Acesso na hora.</h2>
     <p style="margin-bottom:24px;">Pare de anunciar no escuro.</p>
-    <a class="cta" href="#comprar">Quero as 12 teses por R$ 67</a>
+    <a class="cta" href="#" onclick="pgCheckout(event)">Quero as 12 teses por R$ 67</a>
     <div class="trust" style="color:#9a9384;">🔒 Compra 100% segura · garantia de 7 dias · acesso imediato</div>
   </div>
 </section>
@@ -229,6 +253,29 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
     <div class="disc">Este site não é afiliado ao Facebook/Meta nem ao Google e não representa nenhuma dessas empresas. A compra deste material não garante nenhum tipo de resultado; os resultados dependem da aplicação de cada um. Conteúdo proprietário · uso individual.<br>Copyright © Daniel Padilha · 2026 — Todos os direitos reservados.</div>
   </div>
 </footer>
+
+<script>
+// ====== TROCAR CHECKOUT_URL quando o produto da Hotmart for criado ======
+const CHECKOUT_URL = "https://pay.hotmart.com/PRODUTO_TBD";
+
+var hotmartReady = false;
+
+function pgCheckout(e){
+  if(e) e.preventDefault();
+  if(window.fbq){
+    fbq('track','AddToCart',{
+      content_name:'As 12 Teses Juridicas Esquecidas',
+      content_ids:['TESES12-TBD'],
+      content_type:'product',
+      value:67.00, currency:'BRL'
+    });
+  }
+  var url = CHECKOUT_URL + '?src=lp-teses';
+  var fbclid = new URLSearchParams(location.search).get('fbclid');
+  if(fbclid) url += '&fbclid=' + encodeURIComponent(fbclid);
+  setTimeout(function(){ window.location.href = url; }, 300);
+}
+</script>
 
 </body>
 </html>
