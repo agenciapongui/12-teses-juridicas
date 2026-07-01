@@ -48,13 +48,14 @@ src="https://www.facebook.com/tr?id=2258621204527940&ev=PageView&noscript=1"/></
 html{scroll-behavior:smooth;}
 body{font-family:"Poppins",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased;}
 .wrap{width:100%;max-width:960px;margin:0 auto;padding:0 24px;}
-section{padding:72px 0;}
+section{padding:52px 0;}
+@media(max-width:640px){section{padding:36px 0;}}
 .brandbar{text-align:center;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent2);font-weight:700;margin-bottom:30px;}
 .brandbar .d{color:var(--accent);}
 h1{font-weight:500;font-size:clamp(30px,6.2vw,48px);line-height:1.18;text-align:center;color:#403c36;letter-spacing:-.015em;max-width:820px;margin:0 auto;}
 h1 b{font-weight:800;color:var(--ink);}
 h1 .o{font-weight:800;color:var(--accent);}
-h2{font-weight:700;font-size:clamp(24px,5.2vw,38px);line-height:1.22;text-align:center;color:var(--ink);margin-bottom:26px;letter-spacing:-.015em;max-width:820px;margin-left:auto;margin-right:auto;}
+h2{font-weight:700;font-size:clamp(23px,5vw,36px);line-height:1.2;text-align:center;color:var(--ink);margin-bottom:20px;letter-spacing:-.015em;max-width:820px;margin-left:auto;margin-right:auto;}
 h2 .o{color:var(--accent);}
 p{font-size:clamp(15px,4vw,17px);color:var(--soft);text-align:center;margin-bottom:14px;}
 .left p, .left h2{text-align:left;}
@@ -182,12 +183,12 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 .recap-avista{text-align:center;font-size:14.5px;color:var(--muted);margin:10px 0 22px;}
 .recap-avista b{color:#4a463d;font-weight:700;}
 .recap-inst{text-align:center;font-size:14px;color:#4a463d;margin-bottom:22px;}
-.anchor-sec{max-width:600px;margin:28px auto 0;padding:20px 24px;background:rgba(224,123,46,.06);border-left:3px solid var(--accent);border-radius:10px;font-size:14.5px;color:#4a463d;line-height:1.6;text-align:center;}
+.anchor-sec{max-width:600px;margin:18px auto 0;padding:20px 24px;background:rgba(224,123,46,.06);border-left:3px solid var(--accent);border-radius:10px;font-size:14.5px;color:#4a463d;line-height:1.6;text-align:center;}
 .anchor-sec b{color:var(--ink);}
 
 /* Steps (Como funciona) */
-.steps{display:grid;gap:18px;margin-top:32px;}
-@media(min-width:720px){.steps{grid-template-columns:1fr 1fr 1fr;gap:22px;}}
+.steps{display:grid;gap:16px;margin-top:32px;}
+@media(min-width:720px){.steps{grid-template-columns:1fr 1fr 1fr;gap:16px;}}
 .step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 22px;text-align:center;position:relative;}
 @media(max-width:640px){.step{padding:24px 20px;}.step .icon-box{width:76px;height:76px;margin-bottom:12px;}}
 .step .icon-box{display:inline-flex;align-items:center;justify-content:center;width:88px;height:88px;margin-bottom:16px;overflow:hidden;padding:0;background:none;}
@@ -281,7 +282,7 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 .aggr h2{max-width:820px;margin-left:auto;margin-right:auto;}
 
 /* Módulo em seção individual (image + text 2 cols) */
-.mod-section{display:grid;gap:32px;align-items:center;max-width:920px;margin:0 auto;}
+.mod-section{display:grid;gap:24px;align-items:center;max-width:920px;margin:0 auto;}
 @media(min-width:820px){.mod-section{grid-template-columns:1fr 1.15fr;gap:56px;}}
 .mod-section.reverse .mod-img{order:0;}
 @media(min-width:820px){.mod-section.reverse .mod-img{order:2;}}
@@ -297,7 +298,7 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 .bridge h2{max-width:820px;margin:0 auto;}
 
 /* RECAPITULANDO complete box */
-.recap-full{background:#fff;border:2px solid var(--accent);border-radius:22px;padding:36px 34px;max-width:660px;margin:32px auto 0;box-shadow:0 18px 44px rgba(30,64,175,.14);}
+.recap-full{background:#fff;border:2px solid var(--accent);border-radius:22px;padding:36px 34px;max-width:660px;margin:22px auto 0;box-shadow:0 18px 44px rgba(30,64,175,.14);}
 .recap-full ul{list-style:none;margin:0 0 20px;padding:0;}
 .recap-full ul li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);color:#3a372f;line-height:1.4;font-size:15px;position:static;padding-left:0;margin-bottom:0;}
 .recap-full ul li:before{content:none;}
@@ -326,7 +327,7 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 .reinforce h2{max-width:780px;margin:0 auto 26px;}
 
 /* Recap-summary (só lista + total, sem preço) */
-.recap-summary{background:#fff;border:2px solid var(--accent);border-radius:22px;padding:32px 32px;max-width:640px;margin:26px auto 0;box-shadow:0 18px 44px rgba(30,64,175,.12);}
+.recap-summary{background:#fff;border:2px solid var(--accent);border-radius:22px;padding:32px 32px;max-width:640px;margin:18px auto 0;box-shadow:0 18px 44px rgba(30,64,175,.12);}
 .recap-summary ul{list-style:none;margin:0;padding:0;}
 .recap-summary ul li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);color:#3a372f;line-height:1.4;font-size:15px;position:static;padding-left:0;margin-bottom:0;}
 .recap-summary ul li:before{content:none;}
@@ -344,8 +345,8 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 @media(max-width:640px){.how-ico{width:80px;height:80px;}}
 
 /* ==== OFFER HERO (mockup + card branco estilo Massma) ==== */
-.offer-hero{display:grid;gap:24px;align-items:center;max-width:1100px;margin:24px auto 0;position:relative;}
-@media(min-width:900px){.offer-hero{grid-template-columns:1fr 1fr;gap:40px;}}
+.offer-hero{display:grid;gap:16px;align-items:center;max-width:1100px;margin:24px auto 0;position:relative;}
+@media(min-width:900px){.offer-hero{grid-template-columns:1fr 1fr;gap:32px;}}
 .offer-mock{position:relative;padding:20px 8px 8px;}
 .offer-mock img{width:100%;display:block;max-width:520px;margin:0 auto;}
 .offer-mock .aprovado-ribbon{position:absolute;top:28px;left:-6px;background:var(--accent);color:#fff;padding:8px 54px;font-size:11px;font-weight:800;letter-spacing:.16em;transform:rotate(-42deg);transform-origin:center;z-index:5;box-shadow:0 6px 16px rgba(0,0,0,.20);text-transform:uppercase;}
@@ -400,7 +401,7 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 <body>
 
 <!-- HERO -->
-<section style="padding-top:64px;padding-bottom:8px;">
+<section style="padding-top:40px;">
   <div class="wrap">
     <div class="brandbar"><span class="d">&#9670;</span> Daniel Padilha · Tráfego para Advogados</div>
     <h1>Seus anúncios não estão trazendo <span class="o">cliente que fecha contrato</span>?</h1>
@@ -410,7 +411,7 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 </section>
 
 <!-- ANTES/DEPOIS -->
-<section style="padding-top:20px;padding-bottom:20px;">
+<section>
   <div class="wrap">
     <div class="ba-grid">
       <div class="ba-card">
@@ -448,7 +449,7 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 </section>
 
 <!-- RUMINAÇÃO INTRO H2 -->
-<section style="padding-top:20px;padding-bottom:0;">
+<section>
   <div class="wrap">
     <h2>e você sofre todo dia com <span class="o">pensamentos como</span>...</h2>
   </div>
@@ -512,7 +513,7 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 </section>
 
 <!-- MÓDULO 01 -->
-<section style="background:var(--bg2);padding-top:20px;">
+<section style="background:var(--bg2);">
   <div class="wrap">
     <div class="mod-section">
       <div class="mod-img"><img src="mod-01-teses.jpg" width="800" height="800" alt="As 12 Teses Esquecidas" loading="lazy" decoding="async"></div>
@@ -572,15 +573,15 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 </section>
 
 <!-- AINDA NÃO ACABOU + intro bonus -->
-<section style="background:var(--bg2);padding-bottom:20px;">
+<section style="background:var(--bg2);">
   <div class="wrap">
     <h2><span class="red-burst">AINDA NÃO ACABOU!</span></h2>
-    <h2 style="font-size:clamp(22px,4.8vw,32px);margin-top:20px;">Você também vai receber, <span class="o">sem pagar um centavo a mais</span>:</h2>
+    <h2 style="font-size:clamp(22px,4.6vw,30px);margin-top:12px;">Você também vai receber, <span class="o">sem pagar um centavo a mais</span>:</h2>
   </div>
 </section>
 
 <!-- BÔNUS 01 -->
-<section style="background:var(--bg2);padding-top:20px;">
+<section style="background:var(--bg2);">
   <div class="wrap">
     <div class="mod-section">
       <div class="mod-img"><img src="bonus-01-top3.jpg" width="800" height="800" alt="Bônus Top 3" loading="lazy" decoding="async"></div>
@@ -626,31 +627,19 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
   </div>
 </section>
 
-<!-- BRIDGE 1: Enfim -->
+<!-- BRIDGES combinadas -->
 <section class="bridge">
   <div class="wrap">
     <h2>Enfim... Se você quer copiar as <span class="o">12 teses jurídicas</span> que mais fecham contrato hoje...</h2>
+    <h2 style="margin-top:18px;">Então, <span class="o">toque no botão abaixo</span> e receba agora o seu acesso!</h2>
   </div>
 </section>
 
-<!-- BRIDGE 2: Botão abaixo -->
-<section class="bridge" style="padding-top:20px;padding-bottom:60px;">
+<!-- DOBRA A+B combinadas: RECAPITULANDO + Veja tudo -->
+<section style="background:var(--bg2);">
   <div class="wrap">
-    <h2>Então, <span class="o">toque no botão abaixo</span> e receba agora o seu acesso!</h2>
-  </div>
-</section>
-
-<!-- DOBRA A: RECAPITULANDO... (standalone big) -->
-<section style="background:var(--bg2);padding:80px 20px 40px;">
-  <div class="wrap" style="text-align:center;">
-    <h2 style="font-size:clamp(38px,8vw,68px);letter-spacing:.02em;font-weight:800;color:var(--red);text-align:center;margin:0;">RECAPITULANDO...</h2>
-  </div>
-</section>
-
-<!-- DOBRA B: Veja tudo o que você vai receber + list + total riscado -->
-<section style="background:var(--bg2);padding-top:20px;">
-  <div class="wrap">
-    <h2>Veja tudo o que você vai receber <span class="o">nas 12 Teses Esquecidas</span>:</h2>
+    <h2 style="font-size:clamp(34px,7vw,58px);letter-spacing:.02em;font-weight:800;color:var(--red);margin-bottom:12px;">RECAPITULANDO...</h2>
+    <h2 style="font-size:clamp(22px,4.6vw,30px);margin-top:0;">Veja tudo o que você vai receber <span class="o">nas 12 Teses Esquecidas</span>:</h2>
     <div class="recap-summary">
       <ul>
         <li><span>As 12 Teses Esquecidas</span><span class="n">R$ 197</span></li>
@@ -733,8 +722,8 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 <!-- DOBRA E: AUTOR -->
 <section>
   <div class="wrap">
-    <h2 style="margin-bottom:14px;">Daniel Padilha</h2>
-    <h2 style="font-size:clamp(20px,4.4vw,28px);color:var(--muted);font-weight:600;margin-bottom:28px;">É o autor das <span class="o">12 Teses Jurídicas Esquecidas</span>.</h2>
+    <h2 style="margin-bottom:6px;">Daniel Padilha</h2>
+    <h2 style="font-size:clamp(19px,4.2vw,26px);color:var(--muted);font-weight:600;margin-bottom:24px;">É o autor das <span class="o">12 Teses Jurídicas Esquecidas</span>.</h2>
     <div class="author">
       <div class="photo"><img src="hero-09.jpg" width="700" height="1051" alt="Daniel Padilha" loading="lazy" decoding="async"></div>
       <div>
@@ -772,7 +761,7 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
       </div>
     </div>
 
-    <h2 style="margin-top:44px;font-size:clamp(22px,4.8vw,32px);">Eu sei, e você também sabe... <span class="o">A opção 2 é a mais inteligente</span> e é a que você mais precisa.</h2>
+    <h2 style="margin-top:32px;font-size:clamp(21px,4.6vw,30px);">Eu sei, e você também sabe... <span class="o">A opção 2 é a mais inteligente</span> e é a que você mais precisa.</h2>
   </div>
 </section>
 
