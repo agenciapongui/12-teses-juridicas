@@ -342,6 +342,56 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 .how-ico{display:flex;align-items:center;justify-content:center;width:96px;height:96px;margin:0 auto 14px;}
 .how-ico img{width:100%;height:100%;object-fit:contain;}
 @media(max-width:640px){.how-ico{width:80px;height:80px;}}
+
+/* ==== OFFER HERO (mockup + card branco estilo Massma) ==== */
+.offer-hero{display:grid;gap:24px;align-items:center;max-width:1100px;margin:24px auto 0;position:relative;}
+@media(min-width:900px){.offer-hero{grid-template-columns:1fr 1fr;gap:40px;}}
+.offer-mock{position:relative;padding:20px 8px 8px;}
+.offer-mock img{width:100%;display:block;max-width:520px;margin:0 auto;}
+.offer-mock .aprovado-ribbon{position:absolute;top:28px;left:-6px;background:var(--accent);color:#fff;padding:8px 54px;font-size:11px;font-weight:800;letter-spacing:.16em;transform:rotate(-42deg);transform-origin:center;z-index:5;box-shadow:0 6px 16px rgba(0,0,0,.20);text-transform:uppercase;}
+@media(max-width:900px){.offer-mock .aprovado-ribbon{left:-14px;top:14px;font-size:10px;padding:6px 46px;}}
+
+.offer-card{background:#fff;border-radius:22px;padding:36px 32px;box-shadow:0 24px 60px rgba(0,0,0,.08);border:1px solid var(--line);}
+@media(max-width:640px){.offer-card{padding:28px 22px;border-radius:18px;}}
+.offer-title{text-align:center;margin-bottom:6px;}
+.offer-title .k{font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:#333;display:block;margin-bottom:4px;}
+.offer-title .name{display:flex;align-items:center;justify-content:center;gap:10px;font-size:clamp(24px,4.6vw,34px);font-weight:800;letter-spacing:.02em;color:var(--ink);line-height:1.05;text-transform:uppercase;}
+.offer-title .name b{color:var(--accent);}
+.offer-title .toggle{display:inline-block;width:36px;height:20px;background:var(--accent);border-radius:20px;position:relative;flex-shrink:0;}
+.offer-title .toggle:before{content:"";position:absolute;right:2.5px;top:2.5px;width:15px;height:15px;background:#fff;border-radius:50%;}
+
+.offer-divider{border:0;border-top:2px dashed #d4d4d4;margin:22px 0;}
+
+.offer-from{text-align:center;font-size:17px;color:var(--ink);margin:0;line-height:1.4;}
+.offer-from .strike{text-decoration:line-through;text-decoration-color:var(--red);text-decoration-thickness:3px;color:var(--muted);font-weight:700;}
+.offer-parcel{text-align:center;font-weight:800;font-size:clamp(52px,10vw,72px);color:var(--accent);line-height:1;letter-spacing:-.02em;margin:12px 0 4px;}
+.offer-avista{background:#dcfce7;color:#166534;border-radius:16px;padding:12px 24px;text-align:center;font-weight:600;font-size:15.5px;margin:16px auto 20px;display:block;max-width:300px;box-shadow:inset 0 0 0 1px #bbf7d0;}
+.offer-avista b{color:#14532d;font-weight:800;}
+
+.offer-btn{display:block;text-align:center;background:linear-gradient(180deg,#22c55e,#16a34a);color:#fff;padding:22px 24px;border-radius:14px;font-weight:800;font-size:clamp(15px,3.8vw,20px);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;box-shadow:0 14px 28px rgba(34,197,94,.35);cursor:pointer;border:none;width:100%;}
+.offer-btn:hover{filter:brightness(1.05);transform:translateY(-1px);}
+
+.offer-trust{display:flex;justify-content:space-around;gap:8px;margin-top:22px;padding-top:22px;border-top:2px dashed #d4d4d4;}
+.offer-trust .badge{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;flex:1;}
+.offer-trust .badge svg{width:22px;height:22px;}
+.offer-trust .badge .t{font-size:11px;color:var(--muted);line-height:1.2;}
+.offer-trust .badge .t b{color:var(--ink);font-weight:800;display:block;font-size:12px;}
+
+/* ==== DUAS OPÇÕES LIMPAS (sem foto, cores fortes) ==== */
+.opts-clean{display:grid;gap:20px;max-width:920px;margin:32px auto 0;}
+@media(min-width:820px){.opts-clean{grid-template-columns:1fr 1fr;gap:24px;}}
+.opt-clean{padding:36px 30px;border-radius:16px;position:relative;}
+.opt-clean.bad{background:linear-gradient(180deg,#fef2f2,#fee2e2);border:2px solid #fecaca;border-bottom:5px solid var(--red);}
+.opt-clean.good{background:linear-gradient(180deg,#f0fdf4,#dcfce7);border:2px solid #bbf7d0;border-bottom:5px solid var(--green);}
+.opt-clean .head-op{display:flex;align-items:center;gap:14px;margin-bottom:16px;}
+.opt-clean .icon-c{width:54px;height:54px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 18px rgba(0,0,0,.10);flex-shrink:0;}
+.opt-clean .icon-c svg{width:28px;height:28px;}
+.opt-clean.bad .icon-c svg{color:var(--red);}
+.opt-clean.good .icon-c svg{color:var(--green);}
+.opt-clean .title-op{font-size:clamp(24px,5vw,32px);font-weight:800;line-height:1;}
+.opt-clean.bad .title-op{color:var(--red);}
+.opt-clean.good .title-op{color:var(--green);}
+.opt-clean p{color:#3a372f;font-size:15.5px;line-height:1.6;margin:0;}
 </style>
 </head>
 <body>
@@ -612,18 +662,42 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
   </div>
 </section>
 
-<!-- DOBRA C: OFERTA + APROVADO + Preço + Botão -->
+<!-- DOBRA C: OFERTA HERO (mockup + card estilo Massma) -->
 <section>
   <div class="wrap">
     <h2>Mas hoje você tem acesso às <span class="o">12 Teses Esquecidas</span> junto com <span class="o">todos os bônus</span> por apenas:</h2>
 
-    <div class="offer-box">
-      <p class="from-line">De <b>R$ 482</b> por:</p>
-      <div class="recap-tiny">12x <b>de</b></div>
-      <div class="parcel-big">R$ 6,64</div>
-      <p class="parcel-avista">ou <b>R$ 67</b> à vista · sem juros</p>
-      <a class="cta" href="#" onclick="pgCheckout(event)">Quero as 12 teses agora <small>Acesso imediato no seu e-mail</small></a>
-      <div class="trust">🔒 Compra 100% segura · acesso imediato no e-mail</div>
+    <div class="offer-hero">
+      <div class="offer-mock">
+        <span class="aprovado-ribbon">Aprovado</span>
+        <img src="product-mockup.jpg" width="1100" height="900" alt="12 Teses Jurídicas Esquecidas" loading="lazy" decoding="async">
+      </div>
+
+      <div class="offer-card">
+        <div class="offer-title">
+          <span class="k">As 12 Teses</span>
+          <span class="name"><b>Jurídicas</b> Esquecidas <span class="toggle"></span></span>
+        </div>
+        <hr class="offer-divider">
+        <p class="offer-from">De <span class="strike">R$ 482,00</span> por:</p>
+        <div class="offer-parcel">12x de R$ 6,64</div>
+        <div class="offer-avista">ou <b>R$ 67,00</b> à vista</div>
+        <button class="offer-btn" onclick="pgCheckout(event)">Quero as 12 teses</button>
+        <div class="offer-trust">
+          <div class="badge">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z" fill="#1e40af"/><path d="M8.5 12l2.5 2.5L15.5 10" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div class="t"><b>Compra</b>Segura</div>
+          </div>
+          <div class="badge">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l2.4 5 5.6.6-4 4 1 5.6L12 15l-5 2.2 1-5.6-4-4 5.6-.6L12 2z" fill="#1e40af"/></svg>
+            <div class="t"><b>Satisfação</b>Garantida</div>
+          </div>
+          <div class="badge">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="10" width="14" height="10" rx="2" fill="#1e40af"/><path d="M8 10V7a4 4 0 018 0v3" stroke="#1e40af" stroke-width="2" fill="none"/></svg>
+            <div class="t"><b>Privacidade</b>Protegida</div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="anchor-sec">Uma <b>consultoria comigo</b> pra escolher a tese certa pro seu escritório custa <b>R$ 1.500</b>. Aqui você tem <b>12 teses já escolhidas por mim</b>, prontas pra copiar — por menos que um almoço.</div>
@@ -670,48 +744,72 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
   </div>
 </section>
 
-<!-- DOBRA F: DUAS OPÇÕES -->
+<!-- DOBRA F: DUAS OPÇÕES LIMPAS + REFORÇO NA MESMA DOBRA -->
 <section style="background:var(--bg2);">
   <div class="wrap">
     <h2>Agora, você tem <span class="o">duas opções</span></h2>
-    <div class="opts-photo">
-      <div class="opt-p">
-        <div class="ph"><img src="opcao-01-triste.jpg" width="900" height="1117" alt="Opção 1" loading="lazy" decoding="async"></div>
-        <div class="body">
-          <div class="t">Opção 1</div>
-          <p>Continuar seguindo sem resultado, brigando pela mesma tese lotada, pagando caro pelo clique e vendo o seu custo por lead despencar.</p>
+
+    <div class="opts-clean">
+      <div class="opt-clean bad">
+        <div class="head-op">
+          <div class="icon-c">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 6L18 18M6 18L18 6" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+          </div>
+          <div class="title-op">Opção 1</div>
         </div>
+        <p>Continuar seguindo sem resultado, brigando pela mesma tese lotada, pagando caro pelo clique e vendo o seu custo por lead despencar.</p>
       </div>
-      <div class="opt-p good">
-        <div class="ph"><img src="opcao-02-inteligente.jpg" width="900" height="1117" alt="Opção 2" loading="lazy" decoding="async"></div>
-        <div class="body">
-          <div class="t">Opção 2</div>
-          <p>Investir R$ 67 e finalmente copiar as <strong>12 teses jurídicas esquecidas</strong> — as que quase ninguém roda — pra escalar o seu escritório.</p>
+      <div class="opt-clean good">
+        <div class="head-op">
+          <div class="icon-c">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12l4 4L19 8" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          </div>
+          <div class="title-op">Opção 2</div>
         </div>
+        <p>Investir R$ 67 e finalmente copiar as <strong>12 teses jurídicas esquecidas</strong> — as que quase ninguém roda — pra escalar o seu escritório.</p>
       </div>
     </div>
+
+    <h2 style="margin-top:44px;font-size:clamp(22px,4.8vw,32px);">Eu sei, e você também sabe... <span class="o">A opção 2 é a mais inteligente</span> e é a que você mais precisa.</h2>
   </div>
 </section>
 
-<!-- DOBRA G: REFORÇO -->
-<section class="reinforce">
-  <div class="wrap">
-    <h2>Eu sei, e você também sabe... <span class="o">A opção 2 é a mais inteligente</span> e é a que você mais precisa.</h2>
-  </div>
-</section>
-
-<!-- DOBRA H: FINAL CTA -->
-<section style="background:var(--bg2);">
+<!-- DOBRA H: FINAL CTA (mockup + card estilo Massma) -->
+<section>
   <div class="wrap">
     <h2>A opção 2 é a mais inteligente e é a que você mais precisa, então <span class="o">toque no botão abaixo</span> e garanta seu acesso agora!</h2>
 
-    <div class="offer-box" style="margin-top:34px;">
-      <p class="from-line">De <b>R$ 482</b> por:</p>
-      <div class="recap-tiny">12x <b>de</b></div>
-      <div class="parcel-big">R$ 6,64</div>
-      <p class="parcel-avista">ou <b>R$ 67</b> à vista · sem juros</p>
-      <a class="cta" href="#" onclick="pgCheckout(event)">Quero as 12 teses agora <small>Acesso imediato no seu e-mail</small></a>
-      <div class="trust">🔒 Compra 100% segura · acesso imediato no e-mail</div>
+    <div class="offer-hero">
+      <div class="offer-mock">
+        <span class="aprovado-ribbon">Aprovado</span>
+        <img src="product-mockup.jpg" width="1100" height="900" alt="12 Teses Jurídicas Esquecidas" loading="lazy" decoding="async">
+      </div>
+
+      <div class="offer-card">
+        <div class="offer-title">
+          <span class="k">As 12 Teses</span>
+          <span class="name"><b>Jurídicas</b> Esquecidas <span class="toggle"></span></span>
+        </div>
+        <hr class="offer-divider">
+        <p class="offer-from">De <span class="strike">R$ 482,00</span> por:</p>
+        <div class="offer-parcel">12x de R$ 6,64</div>
+        <div class="offer-avista">ou <b>R$ 67,00</b> à vista</div>
+        <button class="offer-btn" onclick="pgCheckout(event)">Quero as 12 teses</button>
+        <div class="offer-trust">
+          <div class="badge">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z" fill="#1e40af"/><path d="M8.5 12l2.5 2.5L15.5 10" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div class="t"><b>Compra</b>Segura</div>
+          </div>
+          <div class="badge">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l2.4 5 5.6.6-4 4 1 5.6L12 15l-5 2.2 1-5.6-4-4 5.6-.6L12 2z" fill="#1e40af"/></svg>
+            <div class="t"><b>Satisfação</b>Garantida</div>
+          </div>
+          <div class="badge">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="10" width="14" height="10" rx="2" fill="#1e40af"/><path d="M8 10V7a4 4 0 018 0v3" stroke="#1e40af" stroke-width="2" fill="none"/></svg>
+            <div class="t"><b>Privacidade</b>Protegida</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
