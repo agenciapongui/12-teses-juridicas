@@ -250,6 +250,35 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
   .guarantee-box h3{text-align:center;}
   .guarantee-box p{text-align:center;}
 }
+
+/* Red Alert box "Agora eu te pergunto" */
+.red-alert-block{padding:56px 22px;}
+.red-alert{background:#B93A38;border-radius:22px;padding:44px;display:flex;gap:36px;align-items:center;max-width:960px;margin:0 auto;color:#fff;box-shadow:0 18px 44px rgba(185,58,56,.28);}
+.red-alert svg{flex:0 0 130px;width:130px;height:130px;}
+.red-alert .rc{flex:1;}
+.red-alert h3{font-size:clamp(24px,4.6vw,34px);color:#facc15;font-weight:800;margin-bottom:20px;text-align:left;line-height:1.15;letter-spacing:-.01em;}
+.red-alert p{font-size:clamp(15px,4vw,18px);color:#fff;text-align:left;margin-bottom:16px;line-height:1.55;}
+.red-alert p:last-child{margin-bottom:0;}
+.red-alert strong{color:#fff;font-weight:800;}
+.red-alert .yl{color:#facc15;font-weight:800;}
+@media(max-width:820px){
+  .red-alert{flex-direction:column;padding:34px 24px;gap:20px;align-items:flex-start;}
+  .red-alert svg{flex:0 0 auto;width:88px;height:88px;margin:0 auto;}
+  .red-alert h3{text-align:center;}
+  .red-alert-block{padding:44px 18px;}
+}
+
+/* "Pra você que" com foto lateral */
+.pvq{display:grid;gap:36px;margin-top:34px;align-items:center;}
+@media(min-width:820px){.pvq{grid-template-columns:0.9fr 1.1fr;gap:44px;}}
+.pvq-ph{border-radius:20px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 18px 44px rgba(0,0,0,.14);}
+.pvq-ph img{width:100%;height:100%;object-fit:cover;display:block;}
+.pvq ul{margin:0;max-width:none;}
+.pvq ul li{background:#fff;border:1px solid var(--line);padding:16px 18px 16px 52px;border-radius:12px;margin-bottom:12px;box-shadow:0 6px 18px rgba(0,0,0,.04);}
+.pvq ul li:before{content:"✓";position:absolute;left:16px;top:14px;width:28px;height:28px;border-radius:50%;background:var(--green);color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;}
+
+/* Aggravation section - punchy */
+.aggr h2{max-width:820px;margin-left:auto;margin-right:auto;}
 </style>
 </head>
 <body>
@@ -295,12 +324,11 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
   </div>
 </section>
 
-<!-- DOR AMPLIFICADA -->
+<!-- DOR SHORT -->
 <section>
   <div class="wrap">
     <h2>Eu sei... seus anúncios não estão trazendo <span class="o">cliente que fecha</span>.</h2>
-    <p>Você já testou criativo bom, público certo, copy afiada. Sobe o anúncio esperando o WhatsApp encher — e o que chega é <strong>curioso</strong>.</p>
-    <p>Pede orçamento e some. Manda "vou pensar" e some. Marca reunião e não aparece. No fim do mês, você olha o painel e o que sobra é <strong>custo por lead alto pagando pra falar com gente que nunca ia contratar</strong>.</p>
+    <p style="font-size:clamp(16px,4.2vw,19px);">…e você sofre todo dia com pensamentos como:</p>
   </div>
 </section>
 
@@ -310,7 +338,6 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
   <div class="overlay"></div>
   <div class="rum-content">
     <div class="rum-inner">
-      <p class="rum-open">E você não aguenta mais ver o dinheiro do escritório evaporar em anúncio que não traz cliente que assina. No fundo, aquela desconfiança que volta toda vez que você abre o gerenciador:</p>
       <div class="think">"Será que é a minha tese que não converte… ou todo mundo já está anunciando ela?"</div>
       <div class="think">"Já testei criativo, público, copy — e o custo só sobe. Será que o problema sou eu?"</div>
       <div class="think">"Todo escritório da minha cidade anuncia exatamente a mesma coisa. Como é que eu vou me destacar nisso?"</div>
@@ -318,32 +345,32 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
   </div>
 </section>
 
-<!-- VIRADA -->
-<section>
+<!-- AGGRAVATION -->
+<section class="aggr">
   <div class="wrap">
-    <h2>Na maioria das vezes, não é o tráfego. <span class="o">É a tese</span>.</h2>
-    <p>Você está disputando a mesma tese saturada que dezenas de escritórios já rodam — pagando caro pelo mesmo clique. O problema não é <em>o quanto</em> você investe. É <strong>no que</strong> você aponta o investimento.</p>
+    <h2>Você não aguenta mais ver o dinheiro do escritório evaporar em <span class="o">anúncio que não vira contrato</span>.</h2>
+    <p style="max-width:720px;margin:0 auto;">E a verdade honesta é essa: <strong>não é o seu tráfego que está errado.</strong> Você está disputando a mesma tese saturada que dezenas de escritórios já rodam — pagando caro pelo mesmo clique. <strong>O problema não é o quanto você investe. É a tese que você escolheu anunciar</strong>.</p>
   </div>
 </section>
 
-<!-- PERGUNTA HONESTA -->
-<section style="background:var(--bg2);">
-  <div class="wrap">
-    <h2>Agora eu te pergunto…</h2>
-    <p style="max-width:680px;margin:0 auto;font-size:clamp(16px,4.2vw,19px);color:#3a372f;">Se você tivesse na mão, ainda hoje, as <strong>12 teses jurídicas com mais demanda e menos concorrência de 2026</strong> — as que quase nenhum escritório da sua cidade está anunciando — <strong>você subiria o anúncio ainda essa semana</strong>?</p>
-  </div>
-</section>
-
-<!-- COMMITMENT -->
-<section>
-  <div class="wrap">
-    <h2>Se a sua resposta for <span class="o">SIM</span>,</h2>
-    <p style="font-size:clamp(17px,4.4vw,20px);color:var(--ink);font-weight:600;">essa página foi feita pra você.</p>
+<!-- RED ALERT: Agora eu te pergunto + SIM -->
+<section class="red-alert-block" style="background:var(--bg2);">
+  <div class="red-alert">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M50 8 L94 88 H6 Z" fill="#facc15" stroke="#1a1a1a" stroke-width="3.5" stroke-linejoin="round"/>
+      <rect x="45" y="34" width="10" height="30" rx="3" fill="#1a1a1a"/>
+      <circle cx="50" cy="74" r="5" fill="#1a1a1a"/>
+    </svg>
+    <div class="rc">
+      <h3>Agora eu te pergunto…</h3>
+      <p>Se você tivesse na mão, ainda hoje, as <strong>12 teses jurídicas com mais demanda e menos concorrência de 2026</strong> — as que quase nenhum escritório da sua cidade anuncia — <strong>você subiria o anúncio ainda essa semana?</strong></p>
+      <p>Se a sua resposta for <span class="yl">"SIM"</span>, <strong>as 12 TESES JURÍDICAS ESQUECIDAS foram feitas pra você.</strong></p>
+    </div>
   </div>
 </section>
 
 <!-- TRANSFORMAÇÃO -->
-<section style="background:var(--bg2);">
+<section>
   <div class="wrap">
     <h2>Com as 12 Teses Esquecidas, <span class="o">você vai</span>:</h2>
     <ul class="tform">
@@ -356,8 +383,8 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
   </div>
 </section>
 
-<!-- STACK INTRO + 4 MÓDULOS -->
-<section>
+<!-- STACK 4 MÓDULOS -->
+<section style="background:var(--bg2);">
   <div class="wrap">
     <h2>Veja o que você vai receber <span class="o">nas 12 Teses Esquecidas</span>:</h2>
     <p style="max-width:660px;margin:0 auto;">Não é um curso. Não tem aula chata. É um <strong>mapa pronto pra copiar e anunciar</strong>. Cada tese vem dissecada em quatro camadas.</p>
@@ -396,7 +423,7 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 </section>
 
 <!-- AINDA NÃO ACABOU + 2 BONUS -->
-<section style="background:var(--bg2);">
+<section>
   <div class="wrap">
     <h2><span class="red-burst">AINDA NÃO ACABOU!</span></h2>
     <p>Você também vai receber, sem pagar um centavo a mais:</p>
@@ -424,16 +451,34 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
   </div>
 </section>
 
-<!-- PRA VOCÊ QUE -->
-<section>
+<!-- PRA VOCÊ QUE (com foto do advogado triste) -->
+<section style="background:var(--bg2);">
   <div class="wrap">
     <h2>As 12 Teses Esquecidas são pra <span class="o">você que</span>:</h2>
-    <ul>
-      <li>Roda (ou quer rodar) anúncio e <strong>não sabe qual tese anunciar</strong>.</li>
-      <li>Está cansado de concorrer na <strong>mesma tese lotada</strong> de escritório da cidade.</li>
-      <li>Quer <strong>cliente que assina contrato</strong>, não curioso que pede orçamento e some.</li>
-      <li>Prefere um <strong>atalho testado</strong> a passar mais três meses testando no dinheiro.</li>
-    </ul>
+    <div class="pvq">
+      <div class="pvq-ph"><img src="opcao-01-triste.jpg" width="900" height="1117" alt="Advogado preocupado" loading="lazy" decoding="async"></div>
+      <ul>
+        <li>Roda (ou quer rodar) anúncio e <strong>não sabe qual tese anunciar</strong>.</li>
+        <li>Está cansado de concorrer na <strong>mesma tese lotada</strong> de escritório da cidade.</li>
+        <li>Quer <strong>cliente que assina contrato</strong>, não curioso que pede orçamento e some.</li>
+        <li>Prefere um <strong>atalho testado</strong> a passar mais três meses testando no dinheiro.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- AUTOR -->
+<section>
+  <div class="wrap">
+    <h2>Quem escreveu isso? <span class="o">Daniel Padilha</span>.</h2>
+    <div class="author">
+      <div class="photo"><img src="hero-09.jpg" width="700" height="1051" alt="Daniel Padilha" loading="lazy" decoding="async"></div>
+      <div>
+        <h3>Daniel Padilha</h3>
+        <p>Há mais de <strong>4 anos</strong> eu rodo tráfego pago focado em <strong>uma coisa só: advocacia</strong>. Já atendi <strong>mais de 100 escritórios</strong> pelo Brasil e gerenciei <strong>mais de R$ 3 milhões em tráfego pra advogados</strong>.</p>
+        <p style="margin-top:12px;">Essas 12 teses saíram das que <strong>mais convertem hoje</strong>, não de achismo. É o que eu levaria pra um escritório se estivesse começando do zero amanhã — sem ter que queimar verba testando pra descobrir o que já sei que funciona.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -461,23 +506,8 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
   </div>
 </section>
 
-<!-- AUTOR -->
-<section>
-  <div class="wrap">
-    <h2>Quem escreveu isso? <span class="o">Daniel Padilha</span>.</h2>
-    <div class="author">
-      <div class="photo"><img src="hero-09.jpg" width="700" height="1051" alt="Daniel Padilha" loading="lazy" decoding="async"></div>
-      <div>
-        <h3>Daniel Padilha</h3>
-        <p>Há mais de <strong>4 anos</strong> eu rodo tráfego pago focado em <strong>uma coisa só: advocacia</strong>. Já atendi <strong>mais de 100 escritórios</strong> pelo Brasil e gerenciei <strong>mais de R$ 3 milhões em tráfego pra advogados</strong>.</p>
-        <p style="margin-top:12px;">Essas 12 teses saíram das que <strong>mais convertem hoje</strong>, não de achismo. É o que eu levaria pra um escritório se estivesse começando do zero amanhã — sem ter que queimar verba testando pra descobrir o que já sei que funciona.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- RECAP + PREÇO -->
-<section style="background:var(--bg2);">
+<section>
   <div class="wrap">
     <h2>Recapitulando: <span class="o">veja tudo o que você leva</span>.</h2>
     <div class="recap">
@@ -502,7 +532,7 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 </section>
 
 <!-- DUAS OPÇÕES -->
-<section>
+<section style="background:var(--bg2);">
   <div class="wrap">
     <h2>A partir de agora, você tem <span class="o">duas opções</span>.</h2>
     <div class="opts-photo">
@@ -525,7 +555,7 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 </section>
 
 <!-- GARANTIA -->
-<section style="background:var(--bg2);">
+<section>
   <div class="wrap">
     <div class="guarantee-box">
       <div class="seal">7<span>DIAS</span></div>
