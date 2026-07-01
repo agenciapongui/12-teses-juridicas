@@ -108,7 +108,8 @@ ul.arrow li:before{content:"→";color:var(--accent);}
 /* author */
 .author{display:flex;gap:24px;align-items:center;max-width:580px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;}
 @media (max-width:520px){.author{flex-direction:column;text-align:center;}}
-.author .photo{flex:0 0 160px;width:160px;height:160px;border-radius:16px;background:var(--bg);border:2px dashed var(--accent);display:flex;align-items:center;justify-content:center;text-align:center;font-size:11px;color:var(--accent);font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:6px;overflow:hidden;}
+.author .photo{flex:0 0 200px;width:200px;height:200px;border-radius:18px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.08);}
+.author .photo img{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;}
 .author p{text-align:left;margin:0;font-size:15px;color:#4a463d;}
 .author h3{font-size:20px;color:var(--ink);margin-bottom:6px;font-weight:700;}
 /* faq */
@@ -214,6 +215,7 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 <!-- ANCORAGEM + CTA 1 -->
 <section>
   <div class="wrap">
+    <img src="mockup.jpg" alt="As 12 Teses Jurídicas Esquecidas" width="1100" height="600" style="width:100%;max-width:520px;height:auto;display:block;margin:0 auto 24px;border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.10);" loading="lazy" decoding="async">
     <p>Uma consultoria pra escolher tese custa <span class="price-strike">centenas de reais</span>.</p>
     <div class="bignum">R$ 67</div>
     <p style="margin-bottom:26px;">12 teses validadas, à vista. Acesso imediato.</p>
@@ -238,7 +240,7 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 <section>
   <div class="wrap">
     <div class="author">
-      <div class="photo" style="border:none;padding:0;background:none;overflow:hidden;"><img src="hero-09.jpg" alt="Daniel Padilha" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;border-radius:14px;"></div>
+      <div class="photo"><img src="hero-09.jpg" alt="Daniel Padilha" loading="lazy" decoding="async"></div>
       <div>
         <h3>Daniel Padilha</h3>
         <p>Há mais de 4 anos eu rodo tráfego pago focado em uma coisa só: <strong>advocacia</strong>. Estas teses saem das contas reais que a minha agência opera — não de achismo.</p>
@@ -250,6 +252,7 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 <!-- CTA 2 (band escuro) -->
 <section class="band">
   <div class="wrap">
+    <img src="mockup.jpg" alt="As 12 Teses Jurídicas Esquecidas" width="1100" height="600" style="width:100%;max-width:460px;height:auto;display:block;margin:0 auto 22px;border-radius:12px;" loading="lazy" decoding="async">
     <h2>12 teses. R$ 67. Acesso na hora.</h2>
     <p style="margin-bottom:24px;">Pare de anunciar no escuro.</p>
     <a class="cta" href="#" onclick="pgCheckout(event)">Quero as 12 teses por R$ 67</a>
