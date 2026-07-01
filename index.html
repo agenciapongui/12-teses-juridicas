@@ -279,6 +279,51 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 
 /* Aggravation section - punchy */
 .aggr h2{max-width:820px;margin-left:auto;margin-right:auto;}
+
+/* Módulo em seção individual (image + text 2 cols) */
+.mod-section{display:grid;gap:32px;align-items:center;max-width:920px;margin:0 auto;}
+@media(min-width:820px){.mod-section{grid-template-columns:1fr 1.15fr;gap:56px;}}
+.mod-section.reverse .mod-img{order:0;}
+@media(min-width:820px){.mod-section.reverse .mod-img{order:2;}}
+.mod-img{border-radius:20px;overflow:hidden;box-shadow:0 18px 44px rgba(0,0,0,.10);aspect-ratio:1/1;}
+.mod-img img{width:100%;height:100%;object-fit:cover;display:block;}
+.mod-copy .tag-line{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-bottom:10px;}
+.mod-copy h2{text-align:left;font-size:clamp(24px,5vw,34px);margin-bottom:16px;}
+.mod-copy p{text-align:left;font-size:clamp(15px,4vw,17px);color:#3a372f;line-height:1.6;}
+.mod-copy .price-line{margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);font-size:14px;color:var(--muted);}
+.mod-copy .price-line b{color:var(--ink);font-weight:800;font-size:15px;}
+
+/* Bridge sections (short H2) */
+.bridge h2{max-width:820px;margin:0 auto;}
+
+/* RECAPITULANDO complete box */
+.recap-full{background:#fff;border:2px solid var(--accent);border-radius:22px;padding:36px 34px;max-width:660px;margin:32px auto 0;box-shadow:0 18px 44px rgba(30,64,175,.14);}
+.recap-full ul{list-style:none;margin:0 0 20px;padding:0;}
+.recap-full ul li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);color:#3a372f;line-height:1.4;font-size:15px;position:static;padding-left:0;margin-bottom:0;}
+.recap-full ul li:before{content:none;}
+.recap-full ul li .n{color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:600;}
+
+.total-line{text-align:center;font-size:16px;font-weight:700;color:var(--ink);padding:20px 0 8px;border-top:1px solid var(--line);margin-top:8px;}
+.total-line b{color:var(--red);}
+.total-line .strike{text-decoration:line-through;text-decoration-color:var(--red);text-decoration-thickness:2.5px;}
+
+.deal-intro{text-align:center;font-size:15px;color:#4a463d;margin:22px 0 14px;line-height:1.5;}
+.aprovado{display:inline-block;background:linear-gradient(180deg,#22c55e,#16a34a);color:#fff;font-weight:800;font-size:22px;letter-spacing:.08em;padding:10px 26px;border-radius:8px;transform:rotate(-3deg);box-shadow:0 10px 24px rgba(34,197,94,.35);margin:12px auto;position:relative;}
+.aprovado:before{content:"✓ ";font-size:20px;}
+
+.from-line{text-align:center;font-size:15px;color:var(--muted);margin:22px 0 0;}
+.parcel-big{text-align:center;font-weight:800;font-size:clamp(52px,13vw,86px);color:var(--accent);line-height:1;letter-spacing:-.02em;margin:8px 0;}
+.parcel-avista{text-align:center;font-size:14.5px;color:var(--muted);margin:0 0 24px;}
+.parcel-avista b{color:#4a463d;font-weight:700;}
+
+/* Como funciona - 3 steps title uppercase */
+.how-step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 24px;text-align:center;}
+.how-step .num-badge{display:inline-flex;align-items:center;justify-content:center;width:60px;height:60px;border-radius:50%;background:var(--green);color:#fff;font-weight:800;font-size:24px;margin-bottom:14px;box-shadow:0 8px 22px rgba(34,197,94,.28);}
+.how-step h4{font-size:16px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin-bottom:8px;}
+.how-step p{font-size:14.5px;color:#4a463d;line-height:1.55;margin:0;}
+
+/* Reinforcement final section */
+.reinforce h2{max-width:780px;margin:0 auto 26px;}
 </style>
 </head>
 <body>
@@ -287,8 +332,8 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 <section style="padding-top:64px;padding-bottom:8px;">
   <div class="wrap">
     <div class="brandbar"><span class="d">&#9670;</span> Daniel Padilha · Tráfego para Advogados</div>
-    <h1><b>Copie</b> as <b>12 teses jurídicas <span class="o">esquecidas</span></b> — as que quase ninguém anuncia e mais fecham contrato.</h1>
-    <p class="subhead">Enquanto dezenas de escritórios brigam pelo mesmo clique caro na tese lotada, você escolhe uma tese com <strong>demanda real e concorrência baixa</strong> — e sobe o anúncio ainda essa semana.</p>
+    <h1>Seus anúncios não estão trazendo <span class="o">cliente que fecha contrato</span>?</h1>
+    <p class="subhead" style="margin-top:22px;font-weight:600;color:var(--ink);font-size:clamp(17px,4.4vw,22px);"><strong>Copie</strong> as <strong>12 teses jurídicas esquecidas</strong> — as que quase ninguém anuncia e mais fecham contrato — e sobe o anúncio ainda essa semana.</p>
     <div class="center-flex"><div class="pill">Atualizado 2026</div></div>
   </div>
 </section>
@@ -312,7 +357,7 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 <!-- DEPOIMENTOS -->
 <section style="background:var(--bg2);">
   <div class="wrap">
-    <h2>Advogados que <span class="o">pararam de anunciar no escuro</span>.</h2>
+    <h2>Veja abaixo <span class="o">resultados reais</span> de quem já parou de anunciar no escuro:</h2>
     <div class="proofs">
       <div class="proof"><img src="hero-03.jpg" width="800" height="248" alt="Depoimento" loading="lazy" decoding="async"></div>
       <div class="proof"><img src="hero-04.jpg" width="800" height="367" alt="Depoimento" loading="lazy" decoding="async"></div>
@@ -324,11 +369,17 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
   </div>
 </section>
 
-<!-- DOR SHORT -->
+<!-- DOR -->
 <section>
   <div class="wrap">
-    <h2>Eu sei... seus anúncios não estão trazendo <span class="o">cliente que fecha</span>.</h2>
-    <p style="font-size:clamp(16px,4.2vw,19px);">…e você sofre todo dia com pensamentos como:</p>
+    <h2>Eu sei... seus anúncios não estão trazendo <span class="o">cliente que fecha</span>, não é mesmo?</h2>
+  </div>
+</section>
+
+<!-- RUMINAÇÃO INTRO H2 -->
+<section style="padding-top:20px;padding-bottom:0;">
+  <div class="wrap">
+    <h2>e você sofre todo dia com <span class="o">pensamentos como</span>...</h2>
   </div>
 </section>
 
@@ -346,10 +397,9 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 </section>
 
 <!-- AGGRAVATION -->
-<section class="aggr">
+<section>
   <div class="wrap">
-    <h2>Você não aguenta mais ver o dinheiro do escritório evaporar em <span class="o">anúncio que não vira contrato</span>.</h2>
-    <p style="max-width:720px;margin:0 auto;">E a verdade honesta é essa: <strong>não é o seu tráfego que está errado.</strong> Você está disputando a mesma tese saturada que dezenas de escritórios já rodam — pagando caro pelo mesmo clique. <strong>O problema não é o quanto você investe. É a tese que você escolheu anunciar</strong>.</p>
+    <h2>Você não aguenta mais <span class="o">torrar dinheiro no tráfego pago</span>, com anúncios que não trazem cliente que fecha e ver o seu custo por lead <span class="o">só subir</span>...</h2>
   </div>
 </section>
 
@@ -362,9 +412,9 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
       <circle cx="50" cy="74" r="5" fill="#1a1a1a"/>
     </svg>
     <div class="rc">
-      <h3>Agora eu te pergunto…</h3>
-      <p>Se você tivesse na mão, ainda hoje, as <strong>12 teses jurídicas com mais demanda e menos concorrência de 2026</strong> — as que quase nenhum escritório da sua cidade anuncia — <strong>você subiria o anúncio ainda essa semana?</strong></p>
-      <p>Se a sua resposta for <span class="yl">"SIM"</span>, <strong>as 12 TESES JURÍDICAS ESQUECIDAS foram feitas pra você.</strong></p>
+      <h3>Agora eu te pergunto...</h3>
+      <p>Se você pudesse ter acesso, ainda hoje, <strong>às 12 teses jurídicas com mais demanda e menos concorrência de 2026</strong> — as que quase nenhum escritório da sua cidade anuncia — <strong>você colocaria pra rodar?</strong></p>
+      <p>Se a sua resposta for <span class="yl">"SIM"</span>, <strong>as 12 TESES JURÍDICAS ESQUECIDAS foram feitas pra você!</strong></p>
     </div>
   </div>
 </section>
@@ -372,7 +422,7 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 <!-- TRANSFORMAÇÃO -->
 <section>
   <div class="wrap">
-    <h2>Com as 12 Teses Esquecidas, <span class="o">você vai</span>:</h2>
+    <h2>Com as 12 Teses Esquecidas <span class="o">você vai</span>:</h2>
     <ul class="tform">
       <li><strong>Parar de brigar</strong> por clique caro na mesma tese que 50 escritórios da sua região já rodam.</li>
       <li><strong>Escolher a tese certa</strong> antes de gastar mais um real com o público errado.</li>
@@ -383,78 +433,115 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
   </div>
 </section>
 
-<!-- STACK 4 MÓDULOS -->
+<!-- DELIVERABLES INTRO -->
 <section style="background:var(--bg2);">
   <div class="wrap">
     <h2>Veja o que você vai receber <span class="o">nas 12 Teses Esquecidas</span>:</h2>
-    <p style="max-width:660px;margin:0 auto;">Não é um curso. Não tem aula chata. É um <strong>mapa pronto pra copiar e anunciar</strong>. Cada tese vem dissecada em quatro camadas.</p>
+  </div>
+</section>
 
-    <div class="stack">
-      <div class="stack-card">
-        <div class="thumb"><img src="mod-01-teses.jpg" width="800" height="800" alt="As 12 Teses" loading="lazy" decoding="async"></div>
-        <div class="tag">Módulo 01</div>
-        <h4>As 12 Teses Esquecidas</h4>
-        <p class="desc">Uma tese por página, com o porquê de cada uma ser lucrativa e ter pouca concorrência hoje. As 12 saíram das contas que a minha agência opera — não de achismo.</p>
-        <div class="val">valor avulso · <b>R$ 197</b></div>
-      </div>
-      <div class="stack-card">
-        <div class="thumb"><img src="mod-02-angulo.jpg" width="800" height="800" alt="Ângulo de Dor" loading="lazy" decoding="async"></div>
-        <div class="tag">Módulo 02</div>
-        <h4>O Ângulo de Dor de cada tese</h4>
-        <p class="desc">O gancho de dor do cliente final pronto — pra você anunciar na língua dele, não no juridiquês. É o que separa o anúncio que para o dedo do que passa batido.</p>
-        <div class="val">valor avulso · <b>R$ 97</b></div>
-      </div>
-      <div class="stack-card">
-        <div class="thumb"><img src="mod-03-mapa.jpg" width="800" height="800" alt="Mapa do Cliente Ideal" loading="lazy" decoding="async"></div>
-        <div class="tag">Módulo 03</div>
-        <h4>O Mapa do Cliente Ideal</h4>
-        <p class="desc">Onde procurar o cliente certo pra cada tese: a região, o perfil e o horário. Você para de queimar verba mirando no público errado.</p>
-        <div class="val">valor avulso · <b>R$ 67</b></div>
-      </div>
-      <div class="stack-card">
-        <div class="thumb"><img src="mod-04-criativo.jpg" width="800" height="800" alt="Formato de Criativo" loading="lazy" decoding="async"></div>
-        <div class="tag">Módulo 04</div>
-        <h4>O Formato de Criativo que converte</h4>
-        <p class="desc">Foto, vídeo ou carrossel — o formato certo pra cada tese, com o motivo. Chega de gravar vídeo pra tese que performa melhor em imagem estática.</p>
-        <div class="val">valor avulso · <b>R$ 47</b></div>
+<!-- MÓDULO 01 -->
+<section style="background:var(--bg2);padding-top:20px;">
+  <div class="wrap">
+    <div class="mod-section">
+      <div class="mod-img"><img src="mod-01-teses.jpg" width="800" height="800" alt="As 12 Teses Esquecidas" loading="lazy" decoding="async"></div>
+      <div class="mod-copy">
+        <div class="tag-line">Módulo 01</div>
+        <h2>As 12 Teses Esquecidas</h2>
+        <p>Uma tese por página, com o porquê de cada uma ser lucrativa e ter pouca concorrência hoje. As 12 saíram das contas reais que a minha agência opera — não de achismo — pra você copiar, colar e anunciar sem queimar verba testando.</p>
+        <div class="price-line">valor avulso · <b>R$ 197</b></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- AINDA NÃO ACABOU + 2 BONUS -->
+<!-- MÓDULO 02 -->
 <section>
   <div class="wrap">
-    <h2><span class="red-burst">AINDA NÃO ACABOU!</span></h2>
-    <p>Você também vai receber, sem pagar um centavo a mais:</p>
-
-    <div class="stack" style="grid-template-columns:1fr;max-width:640px;margin-left:auto;margin-right:auto;">
-      <div class="stack-card bonus" style="flex-direction:row;gap:22px;padding:22px;align-items:center;">
-        <div class="thumb" style="width:140px;height:140px;flex:0 0 140px;aspect-ratio:1/1;"><img src="bonus-01-top3.jpg" width="800" height="800" alt="Bônus Top 3" loading="lazy" decoding="async"></div>
-        <div style="flex:1;display:flex;flex-direction:column;gap:8px;">
-          <div class="tag">Bônus 01</div>
-          <h4>As 3 mais lucrativas, destacadas</h4>
-          <p class="desc" style="margin:0;">De todas as 12, as três que mais fecham contrato hoje — marcadas pra você começar por onde tem mais chance de retorno rápido.</p>
-          <div class="val" style="border-top:1px dashed var(--line);padding-top:10px;margin-top:4px;">valor avulso · <b>R$ 47</b></div>
-        </div>
-      </div>
-      <div class="stack-card bonus" style="flex-direction:row;gap:22px;padding:22px;align-items:center;">
-        <div class="thumb" style="width:140px;height:140px;flex:0 0 140px;aspect-ratio:1/1;"><img src="bonus-02-2026.jpg" width="800" height="800" alt="Atualização 2026" loading="lazy" decoding="async"></div>
-        <div style="flex:1;display:flex;flex-direction:column;gap:8px;">
-          <div class="tag">Bônus 02</div>
-          <h4>Atualização 2026</h4>
-          <p class="desc" style="margin:0;">O que mudou no comportamento do cliente e na concorrência neste ano — pra você não anunciar com o mapa do ano passado.</p>
-          <div class="val" style="border-top:1px dashed var(--line);padding-top:10px;margin-top:4px;">valor avulso · <b>R$ 27</b></div>
-        </div>
+    <div class="mod-section reverse">
+      <div class="mod-img"><img src="mod-02-angulo.jpg" width="800" height="800" alt="Ângulo de Dor" loading="lazy" decoding="async"></div>
+      <div class="mod-copy">
+        <div class="tag-line">Módulo 02</div>
+        <h2>O Ângulo de Dor de cada tese</h2>
+        <p>O gancho de dor do cliente final pronto — pra você anunciar na língua dele, não no juridiquês. É exatamente o que separa o anúncio que <strong>para o dedo</strong> do que passa batido no feed.</p>
+        <div class="price-line">valor avulso · <b>R$ 97</b></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PRA VOCÊ QUE (com foto do advogado triste) -->
+<!-- MÓDULO 03 -->
 <section style="background:var(--bg2);">
   <div class="wrap">
-    <h2>As 12 Teses Esquecidas são pra <span class="o">você que</span>:</h2>
+    <div class="mod-section">
+      <div class="mod-img"><img src="mod-03-mapa.jpg" width="800" height="800" alt="Mapa do Cliente Ideal" loading="lazy" decoding="async"></div>
+      <div class="mod-copy">
+        <div class="tag-line">Módulo 03</div>
+        <h2>O Mapa do Cliente Ideal</h2>
+        <p>Onde procurar o cliente certo pra cada tese: a região, o perfil e o horário. Você <strong>para de queimar verba</strong> mirando no público errado e passa a falar direto com quem realmente precisa do seu serviço.</p>
+        <div class="price-line">valor avulso · <b>R$ 67</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MÓDULO 04 -->
+<section>
+  <div class="wrap">
+    <div class="mod-section reverse">
+      <div class="mod-img"><img src="mod-04-criativo.jpg" width="800" height="800" alt="Formato de Criativo" loading="lazy" decoding="async"></div>
+      <div class="mod-copy">
+        <div class="tag-line">Módulo 04</div>
+        <h2>O Formato de Criativo que converte</h2>
+        <p>Foto, vídeo ou carrossel — o formato certo pra cada tese, com o motivo. Chega de gravar vídeo pra uma tese que performa melhor em imagem estática (ou o contrário) e queimar tempo no formato errado.</p>
+        <div class="price-line">valor avulso · <b>R$ 47</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AINDA NÃO ACABOU + intro bonus -->
+<section style="background:var(--bg2);padding-bottom:20px;">
+  <div class="wrap">
+    <h2><span class="red-burst">AINDA NÃO ACABOU!</span></h2>
+    <h2 style="font-size:clamp(22px,4.8vw,32px);margin-top:20px;">Você também vai receber, <span class="o">sem pagar um centavo a mais</span>:</h2>
+  </div>
+</section>
+
+<!-- BÔNUS 01 -->
+<section style="background:var(--bg2);padding-top:20px;">
+  <div class="wrap">
+    <div class="mod-section">
+      <div class="mod-img"><img src="bonus-01-top3.jpg" width="800" height="800" alt="Bônus Top 3" loading="lazy" decoding="async"></div>
+      <div class="mod-copy">
+        <div class="tag-line">Bônus 01</div>
+        <h2>As 3 mais lucrativas, destacadas</h2>
+        <p>De todas as 12, as três que <strong>mais fecham contrato hoje</strong> — marcadas pra você começar por onde tem mais chance de retorno rápido. Se a verba tá curta, você já sabe onde apostar primeiro.</p>
+        <div class="price-line">valor avulso · <b>R$ 47</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BÔNUS 02 -->
+<section>
+  <div class="wrap">
+    <div class="mod-section reverse">
+      <div class="mod-img"><img src="bonus-02-2026.jpg" width="800" height="800" alt="Atualização 2026" loading="lazy" decoding="async"></div>
+      <div class="mod-copy">
+        <div class="tag-line">Bônus 02</div>
+        <h2>Atualização 2026</h2>
+        <p>O que mudou no comportamento do cliente e na concorrência neste ano — pra você <strong>não anunciar com o mapa do ano passado</strong>. Cliente muda, tese muda, tráfego muda. Você sempre com o dado atualizado.</p>
+        <div class="price-line">valor avulso · <b>R$ 27</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRA VOCÊ QUE -->
+<section style="background:var(--bg2);">
+  <div class="wrap">
+    <h2>As 12 Teses Esquecidas são <span class="o">pra você que</span>:</h2>
     <div class="pvq">
       <div class="pvq-ph"><img src="opcao-01-triste.jpg" width="900" height="1117" alt="Advogado preocupado" loading="lazy" decoding="async"></div>
       <ul>
@@ -462,56 +549,34 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
         <li>Está cansado de concorrer na <strong>mesma tese lotada</strong> de escritório da cidade.</li>
         <li>Quer <strong>cliente que assina contrato</strong>, não curioso que pede orçamento e some.</li>
         <li>Prefere um <strong>atalho testado</strong> a passar mais três meses testando no dinheiro.</li>
+        <li>Quer <strong>escalar as vendas</strong> do escritório sem depender de indicação.</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- AUTOR -->
-<section>
+<!-- BRIDGE 1 -->
+<section class="bridge">
   <div class="wrap">
-    <h2>Quem escreveu isso? <span class="o">Daniel Padilha</span>.</h2>
-    <div class="author">
-      <div class="photo"><img src="hero-09.jpg" width="700" height="1051" alt="Daniel Padilha" loading="lazy" decoding="async"></div>
-      <div>
-        <h3>Daniel Padilha</h3>
-        <p>Há mais de <strong>4 anos</strong> eu rodo tráfego pago focado em <strong>uma coisa só: advocacia</strong>. Já atendi <strong>mais de 100 escritórios</strong> pelo Brasil e gerenciei <strong>mais de R$ 3 milhões em tráfego pra advogados</strong>.</p>
-        <p style="margin-top:12px;">Essas 12 teses saíram das que <strong>mais convertem hoje</strong>, não de achismo. É o que eu levaria pra um escritório se estivesse começando do zero amanhã — sem ter que queimar verba testando pra descobrir o que já sei que funciona.</p>
-      </div>
-    </div>
+    <h2>Enfim... Se você quer copiar as <span class="o">12 teses jurídicas</span> que mais fecham contrato hoje...</h2>
   </div>
 </section>
 
-<!-- COMO FUNCIONA -->
+<!-- BRIDGE 2 -->
+<section class="bridge" style="padding-top:20px;">
+  <div class="wrap">
+    <h2>Então, <span class="o">toque no botão abaixo</span> e receba agora o seu acesso!</h2>
+  </div>
+</section>
+
+<!-- RECAPITULANDO -->
 <section style="background:var(--bg2);">
   <div class="wrap">
-    <h2>Do pagamento ao anúncio no ar <span class="o">em minutos</span>.</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="icon-box"><img src="icon-1.png" width="400" height="400" alt="Comprar" loading="lazy" decoding="async"></div>
-        <h4>Você compra</h4>
-        <p>Pagamento seguro pela Hotmart. Em poucos minutos o acesso cai na sua caixa de entrada.</p>
-      </div>
-      <div class="step">
-        <div class="icon-box"><img src="icon-2.png" width="400" height="400" alt="Escolher" loading="lazy" decoding="async"></div>
-        <h4>Você escolhe a tese</h4>
-        <p>Abre no celular ou no computador, acha a tese que combina com o seu escritório e lê o ângulo pronto.</p>
-      </div>
-      <div class="step">
-        <div class="icon-box"><img src="icon-3.png" width="400" height="400" alt="Anunciar" loading="lazy" decoding="async"></div>
-        <h4>Você anuncia</h4>
-        <p>Sobe o criativo no formato indicado, mirando o cliente certo. Sem virar especialista em tráfego.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <h2 style="text-align:center;letter-spacing:.02em;"><span class="o">RECAPITULANDO...</span></h2>
+    <h2 style="font-size:clamp(22px,4.6vw,32px);margin-top:14px;">Veja tudo o que você vai receber nas 12 Teses Esquecidas:</h2>
 
-<!-- RECAP + PREÇO -->
-<section>
-  <div class="wrap">
-    <h2>Recapitulando: <span class="o">veja tudo o que você leva</span>.</h2>
-    <div class="recap">
-      <ul class="recap-list">
+    <div class="recap-full">
+      <ul>
         <li><span>As 12 Teses Esquecidas</span><span class="n">R$ 197</span></li>
         <li><span>O Ângulo de Dor de cada tese</span><span class="n">R$ 97</span></li>
         <li><span>O Mapa do Cliente Ideal</span><span class="n">R$ 67</span></li>
@@ -519,11 +584,13 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
         <li><span>Bônus · As 3 mais lucrativas</span><span class="n">R$ 47</span></li>
         <li><span>Bônus · Atualização 2026</span><span class="n">R$ 27</span></li>
       </ul>
-      <div class="recap-total"><span class="k">Valor somado das partes</span><span class="v">R$ 482</span></div>
-      <p class="recap-call">Hoje, tudo junto, por apenas</p>
+      <div class="total-line">Tudo isso deveria custar: <b class="strike">R$ 482</b></div>
+      <p class="deal-intro">Mas hoje você tem acesso às 12 Teses Esquecidas junto com todos os bônus por apenas:</p>
+      <div style="text-align:center;"><span class="aprovado">APROVADO</span></div>
+      <p class="from-line">De <b>R$ 482</b> por:</p>
       <div class="recap-tiny">12x <b>de</b></div>
-      <div class="recap-big">R$ 6,64</div>
-      <p class="recap-avista">ou <b>R$ 67</b> à vista · sem juros</p>
+      <div class="parcel-big">R$ 6,64</div>
+      <p class="parcel-avista">ou <b>R$ 67</b> à vista · sem juros</p>
       <a class="cta" href="#" onclick="pgCheckout(event)">Quero as 12 teses agora <small>Acesso imediato no seu e-mail</small></a>
       <div class="trust">🔒 Compra segura · garantia incondicional de 7 dias</div>
     </div>
@@ -531,25 +598,82 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
   </div>
 </section>
 
-<!-- DUAS OPÇÕES -->
+<!-- COMO FUNCIONA (após price) -->
+<section>
+  <div class="wrap">
+    <h2>Compre agora e <span class="o">receba seu acesso no e-mail imediatamente</span>!</h2>
+    <div class="steps">
+      <div class="how-step">
+        <div class="num-badge">1</div>
+        <h4>FAÇA SUA COMPRA</h4>
+        <p>Em poucos minutos você recebe seu acesso na sua caixa de entrada.</p>
+      </div>
+      <div class="how-step">
+        <div class="num-badge">2</div>
+        <h4>BAIXE O MATERIAL</h4>
+        <p>Todo o material fica disponível para download instantâneo no seu celular ou computador.</p>
+      </div>
+      <div class="how-step">
+        <div class="num-badge">3</div>
+        <h4>TUDO PRONTO!</h4>
+        <p>Agora é só escolher a tese certa e subir o anúncio no seu gerenciador.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTOR -->
 <section style="background:var(--bg2);">
   <div class="wrap">
-    <h2>A partir de agora, você tem <span class="o">duas opções</span>.</h2>
+    <h2 style="margin-bottom:24px;">Daniel Padilha</h2>
+    <h2 style="font-size:clamp(20px,4.4vw,28px);color:var(--muted);font-weight:600;margin-bottom:28px;">É o autor das <span class="o">12 Teses Jurídicas Esquecidas</span>.</h2>
+    <div class="author">
+      <div class="photo"><img src="hero-09.jpg" width="700" height="1051" alt="Daniel Padilha" loading="lazy" decoding="async"></div>
+      <div>
+        <p>Há mais de <strong>4 anos</strong> eu rodo tráfego pago focado em <strong>uma coisa só: advocacia</strong>. Já atendi <strong>mais de 100 escritórios</strong> pelo Brasil e gerenciei <strong>mais de R$ 3 milhões em tráfego pra advogados</strong>.</p>
+        <p style="margin-top:12px;">Essas 12 teses saíram das que <strong>mais convertem hoje</strong>, não de achismo. Agora chegou a sua vez de copiar essas teses pra escalar as vendas do seu escritório sem queimar verba testando pra descobrir o que já sei que funciona.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DUAS OPÇÕES -->
+<section>
+  <div class="wrap">
+    <h2>Agora, você tem <span class="o">duas opções</span>.</h2>
     <div class="opts-photo">
       <div class="opt-p">
         <div class="ph"><img src="opcao-01-triste.jpg" width="900" height="1117" alt="Opção 1" loading="lazy" decoding="async"></div>
         <div class="body">
           <div class="t">Opção 1</div>
-          <p>Continuar na mesma tese lotada de concorrente, pagando caro pelo clique e torcendo pra que dessa vez feche.</p>
+          <p>Continuar seguindo sem resultado, brigando pela mesma tese lotada, pagando caro pelo clique e torcendo pra que dessa vez feche.</p>
         </div>
       </div>
       <div class="opt-p good">
         <div class="ph"><img src="opcao-02-inteligente.jpg" width="900" height="1117" alt="Opção 2" loading="lazy" decoding="async"></div>
         <div class="body">
-          <div class="t">Opção 2 — a inteligente</div>
-          <p>Por R$ 67, ver as 12 teses que quase ninguém roda — e escolher onde tem demanda e pouca briga. Se não fizer sentido, você tem 7 dias pra pedir o dinheiro de volta.</p>
+          <div class="t">Opção 2</div>
+          <p>Investir R$ 67 e finalmente copiar as 12 teses jurídicas esquecidas — as que quase ninguém roda — pra escalar o seu escritório.</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- REINFORCEMENT + FINAL CTA -->
+<section class="reinforce" style="background:var(--bg2);">
+  <div class="wrap">
+    <h2>Eu sei, e você também sabe... <span class="o">A opção 2 é a mais inteligente</span> e é a que você mais precisa.</h2>
+    <h2 style="font-size:clamp(20px,4.4vw,28px);margin-bottom:0;">Então, <span class="o">toque no botão abaixo</span> e garanta seu acesso agora!</h2>
+
+    <div class="recap-full" style="margin-top:34px;">
+      <div style="text-align:center;"><span class="aprovado">APROVADO</span></div>
+      <p class="from-line">De <b>R$ 482</b> por:</p>
+      <div class="recap-tiny">12x <b>de</b></div>
+      <div class="parcel-big">R$ 6,64</div>
+      <p class="parcel-avista">ou <b>R$ 67</b> à vista · sem juros</p>
+      <a class="cta" href="#" onclick="pgCheckout(event)">Quero as 12 teses agora <small>Acesso imediato no seu e-mail</small></a>
+      <div class="trust">🔒 Compra segura · garantia incondicional de 7 dias</div>
     </div>
   </div>
 </section>
@@ -567,20 +691,8 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
   </div>
 </section>
 
-<!-- CTA FINAL BAND -->
-<section class="band">
-  <div class="wrap">
-    <h2>12 teses. <span class="o">12x de R$ 6,64</span>. Acesso na hora.</h2>
-    <p style="margin-bottom:6px;">Escolha a tese certa antes de gastar mais um real com o anúncio errado.</p>
-    <p style="margin-bottom:26px;font-size:14px;color:#bdb6aa;">ou <b style="color:#f0ece4;">R$ 67 à vista</b> · sem juros · acesso na hora</p>
-    <img src="mockup.jpg" width="1100" height="600" alt="12 Teses Jurídicas Esquecidas" loading="lazy" decoding="async" style="width:100%;max-width:640px;height:auto;display:block;margin:0 auto 28px;border-radius:14px;box-shadow:0 18px 44px rgba(0,0,0,.30);">
-    <a class="cta" href="#" onclick="pgCheckout(event)">Quero as 12 teses agora <small>Acesso imediato no seu e-mail</small></a>
-    <div class="trust" style="color:#9a9384;">🔒 Compra segura · garantia de 7 dias · acesso imediato</div>
-  </div>
-</section>
-
 <!-- FAQ -->
-<section>
+<section style="background:var(--bg2);">
   <div class="wrap">
     <h2>Perguntas frequentes</h2>
     <div class="faq">
