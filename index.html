@@ -46,14 +46,14 @@ src="https://www.facebook.com/tr?id=2258621204527940&ev=PageView&noscript=1"/></
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{font-family:"Poppins",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased;}
-.wrap{width:100%;max-width:720px;margin:0 auto;padding:0 24px;}
-section{padding:46px 0;}
+.wrap{width:100%;max-width:960px;margin:0 auto;padding:0 24px;}
+section{padding:72px 0;}
 .brandbar{text-align:center;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent2);font-weight:700;margin-bottom:30px;}
 .brandbar .d{color:var(--accent);}
-h1{font-weight:500;font-size:clamp(26px,6.2vw,40px);line-height:1.22;text-align:center;color:#403c36;letter-spacing:-.01em;}
+h1{font-weight:500;font-size:clamp(30px,6.2vw,48px);line-height:1.18;text-align:center;color:#403c36;letter-spacing:-.015em;max-width:820px;margin:0 auto;}
 h1 b{font-weight:800;color:var(--ink);}
 h1 .o{font-weight:800;color:var(--accent);}
-h2{font-weight:700;font-size:clamp(22px,5.2vw,31px);line-height:1.25;text-align:center;color:var(--ink);margin-bottom:22px;letter-spacing:-.01em;}
+h2{font-weight:700;font-size:clamp(24px,5.2vw,38px);line-height:1.22;text-align:center;color:var(--ink);margin-bottom:26px;letter-spacing:-.015em;max-width:820px;margin-left:auto;margin-right:auto;}
 h2 .o{color:var(--accent);}
 p{font-size:clamp(15px,4vw,17px);color:var(--soft);text-align:center;margin-bottom:14px;}
 .left p, .left h2{text-align:left;}
@@ -67,7 +67,7 @@ strong{font-weight:700;color:var(--ink);}
   font-weight:700;text-align:center;padding:22px;}
 .prodph .sub{color:var(--muted);font-weight:500;letter-spacing:.02em;text-transform:none;font-size:12.5px;}
 /* before / after lawyer cards */
-.ba-grid{display:grid;gap:14px;margin-top:26px;max-width:680px;margin-left:auto;margin-right:auto;}
+.ba-grid{display:grid;gap:22px;margin-top:34px;max-width:820px;margin-left:auto;margin-right:auto;}
 @media(min-width:600px){.ba-grid{grid-template-columns:1fr 1fr;}}
 .ba-card{text-align:center;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;}
 .ba-label{display:block;font-weight:700;font-size:14px;color:#fff;padding:12px 12px;line-height:1.3;}
@@ -75,13 +75,13 @@ strong{font-weight:700;color:var(--ink);}
 .ba-label.good{background:var(--green2);}
 .ba-img{width:100%;display:block;}
 /* CTA */
-.cta{display:flex;flex-direction:column;align-items:center;width:100%;max-width:480px;margin:6px auto;background:var(--green);color:#fff;text-align:center;
+.cta{display:flex;flex-direction:column;align-items:center;width:100%;max-width:560px;margin:6px auto;background:var(--green);color:#fff;text-align:center;
   font-weight:800;font-size:clamp(17px,4.6vw,20px);padding:21px 26px;border-radius:16px;text-decoration:none;box-shadow:0 12px 28px rgba(76,138,44,.32);transition:transform .12s;}
 .cta:active{transform:scale(.99);}
 .cta small{font-weight:500;font-size:13px;opacity:.92;margin-top:3px;}
 .trust{text-align:center;font-size:13px;color:var(--muted);margin-top:14px;}
 /* cards / proofs */
-.proofs{display:grid;gap:16px;margin-top:6px;}
+.proofs{display:grid;gap:22px;margin-top:14px;}
 @media(min-width:600px){.proofs{grid-template-columns:1fr 1fr;}}
 .proof{background:none;border:none;padding:0;border-radius:14px;overflow:hidden;box-shadow:0 8px 22px rgba(0,0,0,.06);}
 .proof img{display:block;width:100%;border-radius:14px;}
@@ -90,15 +90,15 @@ strong{font-weight:700;color:var(--ink);}
 .proof .tag:before{content:"✓ ";}
 .note{font-size:13px;color:var(--accent2);background:#fff;border:1px dashed var(--accent);border-radius:10px;padding:11px 16px;margin-top:20px;text-align:center;}
 /* list */
-ul{list-style:none;max-width:520px;margin:6px auto;}
+ul{list-style:none;max-width:640px;margin:12px auto;}
 li{position:relative;padding-left:34px;margin-bottom:15px;font-size:clamp(15px,4vw,17px);color:#3a372f;text-align:left;}
 li:before{content:"✓";position:absolute;left:0;top:-1px;color:var(--green2);font-weight:800;font-size:19px;}
 ul.arrow li:before{content:"→";color:var(--accent);}
 /* anchor */
 .price-strike{text-decoration:line-through;color:var(--muted);}
-.bignum{font-weight:800;font-size:clamp(52px,15vw,84px);color:var(--accent);line-height:1;text-align:center;margin:8px 0;}
+.bignum{font-weight:800;font-size:clamp(64px,15vw,110px);color:var(--accent);line-height:1;text-align:center;margin:14px 0;}
 /* options */
-.opts{display:grid;gap:16px;margin:22px auto;max-width:560px;}
+.opts{display:grid;gap:22px;margin:32px auto;max-width:720px;}
 @media(min-width:600px){.opts{grid-template-columns:1fr 1fr;}}
 .opt{border-radius:16px;padding:22px;background:#fff;border:1px solid var(--line);}
 .opt .t{font-weight:700;font-size:14px;margin-bottom:10px;color:var(--muted);}
@@ -106,14 +106,14 @@ ul.arrow li:before{content:"→";color:var(--accent);}
 .opt.good{border:2px solid var(--accent);background:#fff7f0;}
 .opt.good .t{color:var(--accent2);}
 /* author */
-.author{display:flex;gap:24px;align-items:center;max-width:580px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;}
-@media (max-width:520px){.author{flex-direction:column;text-align:center;}}
-.author .photo{flex:0 0 200px;width:200px;height:200px;border-radius:18px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.08);}
+.author{display:flex;gap:36px;align-items:center;max-width:780px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:22px;padding:36px 40px;box-shadow:0 12px 32px rgba(0,0,0,.05);}
+@media (max-width:640px){.author{flex-direction:column;text-align:center;padding:28px 26px;gap:22px;}.author .photo{width:220px;height:220px;flex:0 0 220px;}.author p{text-align:center;}}
+.author .photo{flex:0 0 280px;width:280px;height:280px;border-radius:22px;overflow:hidden;box-shadow:0 12px 32px rgba(0,0,0,.10);}
 .author .photo img{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;}
-.author p{text-align:left;margin:0;font-size:15px;color:#4a463d;}
-.author h3{font-size:20px;color:var(--ink);margin-bottom:6px;font-weight:700;}
+.author p{text-align:left;margin:0;font-size:17px;color:#4a463d;line-height:1.6;}
+.author h3{font-size:26px;color:var(--ink);margin-bottom:10px;font-weight:700;}
 /* faq */
-.faq{max-width:580px;margin:0 auto;}
+.faq{max-width:720px;margin:0 auto;}
 details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:12px;}
 summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;gap:12px;color:var(--ink);}
 summary::-webkit-details-marker{display:none;}
@@ -132,7 +132,7 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 <body>
 
 <!-- HERO -->
-<section style="padding-top:38px;">
+<section style="padding-top:68px;">
   <div class="wrap">
     <div class="brandbar"><span class="d">&#9670;</span> Daniel Padilha · Tráfego para Advogados</div>
     <h1>Descubra as <b>12 teses jurídicas</b> que mais <span class="o">fecham contrato</span> — as de <b>menor concorrência</b> e maior lucro.</h1>
@@ -215,7 +215,7 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 <!-- ANCORAGEM + CTA 1 -->
 <section>
   <div class="wrap">
-    <img src="mockup.jpg" alt="As 12 Teses Jurídicas Esquecidas" width="1100" height="600" style="width:100%;max-width:520px;height:auto;display:block;margin:0 auto 24px;border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.10);" loading="lazy" decoding="async">
+    <img src="mockup.jpg" alt="As 12 Teses Jurídicas Esquecidas" width="1100" height="600" style="width:100%;max-width:720px;height:auto;display:block;margin:0 auto 32px;border-radius:16px;box-shadow:0 18px 44px rgba(0,0,0,.14);" loading="lazy" decoding="async">
     <p>Uma consultoria pra escolher tese custa <span class="price-strike">centenas de reais</span>.</p>
     <div class="bignum">R$ 67</div>
     <p style="margin-bottom:26px;">12 teses validadas, à vista. Acesso imediato.</p>
@@ -252,7 +252,7 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 <!-- CTA 2 (band escuro) -->
 <section class="band">
   <div class="wrap">
-    <img src="mockup.jpg" alt="As 12 Teses Jurídicas Esquecidas" width="1100" height="600" style="width:100%;max-width:460px;height:auto;display:block;margin:0 auto 22px;border-radius:12px;" loading="lazy" decoding="async">
+    <img src="mockup.jpg" alt="As 12 Teses Jurídicas Esquecidas" width="1100" height="600" style="width:100%;max-width:640px;height:auto;display:block;margin:0 auto 28px;border-radius:14px;box-shadow:0 18px 44px rgba(0,0,0,.30);" loading="lazy" decoding="async">
     <h2>12 teses. R$ 67. Acesso na hora.</h2>
     <p style="margin-bottom:24px;">Pare de anunciar no escuro.</p>
     <a class="cta" href="#" onclick="pgCheckout(event)">Quero as 12 teses por R$ 67</a>
