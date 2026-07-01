@@ -528,12 +528,21 @@ form.addEventListener('submit', async (e) => {
     console.warn('Falha de rede ao enviar pro CRM:', err);
   }
 
-  // fbq event: lead qualificado
+  // fbq events: Lead bruto (todos) + Lead qualificado (budget >= R$ 1.500)
   if (window.fbq) {
+    // Lead BRUTO — dispara pra QUALQUER submit do form
     fbq('track', 'Lead', {
       content_name: 'Pré-qualificação 12 Teses Jurídicas',
       content_category: investimento,
     });
+    // Lead QUALIFICADO — só dispara pra budget >= R$ 1.500
+    var QUALIFIED_BUDGETS = ['R$ 1.500 a R$ 3.000', 'R$ 3.000 a R$ 5.000', 'Acima de R$ 5.000'];
+    if (QUALIFIED_BUDGETS.indexOf(investimento) !== -1) {
+      fbq('track', 'Lead', {
+        content_name: 'Lead Qualificado 12 Teses',
+        content_category: investimento,
+      });
+    }
     if (reuniao === 'Quero falar com um especialista') {
       fbq('track', 'Schedule', { content_name: 'Agendou call estratégica' });
     }
