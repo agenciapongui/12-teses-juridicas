@@ -345,7 +345,7 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 @media(max-width:640px){.how-ico{width:80px;height:80px;}}
 
 /* ==== OFFER HERO (mockup + card branco estilo Massma) ==== */
-.offer-hero{display:grid;gap:20px;align-items:start;max-width:1100px;margin:20px auto 0;position:relative;}
+.offer-hero{display:grid;gap:20px;align-items:stretch;max-width:1100px;margin:20px auto 0;position:relative;}
 @media(min-width:900px){.offer-hero{grid-template-columns:1fr 1fr;gap:32px;}}
 .offer-mock{position:relative;}
 .offer-mock img{width:100%;display:block;margin:0;}
@@ -395,7 +395,14 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 .offer-title .line-2 b{color:var(--accent);font-weight:800;}
 
 /* Mockup com proporção 1:1 fixa (arquivo é 1400x1400) */
-.offer-mock img{aspect-ratio:1/1;object-fit:contain;}
+.offer-mock{border-radius:16px;overflow:hidden;background:#0a0a0a;}
+.offer-mock img{width:100%;display:block;}
+@media(min-width:900px){
+  .offer-mock img{width:100%;height:100%;object-fit:cover;object-position:center;}
+}
+@media(max-width:899px){
+  .offer-mock img{aspect-ratio:1/1;object-fit:cover;height:auto;}
+}
 </style>
 </head>
 <body>
@@ -661,7 +668,7 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 
     <div class="offer-hero">
       <div class="offer-mock">
-        <img src="product-mockup.jpg" width="1400" height="1400" alt="12 Teses Jurídicas Esquecidas" loading="lazy" decoding="async">
+        <img src="product-mockup.jpg" width="800" height="800" alt="12 Teses Jurídicas Esquecidas" loading="lazy" decoding="async">
       </div>
 
       <div class="offer-card">
@@ -772,7 +779,7 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 
     <div class="offer-hero">
       <div class="offer-mock">
-        <img src="product-mockup.jpg" width="1400" height="1400" alt="12 Teses Jurídicas Esquecidas" loading="lazy" decoding="async">
+        <img src="product-mockup.jpg" width="800" height="800" alt="12 Teses Jurídicas Esquecidas" loading="lazy" decoding="async">
       </div>
 
       <div class="offer-card">
