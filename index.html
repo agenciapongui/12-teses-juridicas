@@ -353,12 +353,7 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 
 .offer-card{background:#fff;border-radius:22px;padding:36px 32px;box-shadow:0 24px 60px rgba(0,0,0,.08);border:1px solid var(--line);}
 @media(max-width:640px){.offer-card{padding:28px 22px;border-radius:18px;}}
-.offer-title{text-align:center;margin-bottom:6px;}
-.offer-title .k{font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:#333;display:block;margin-bottom:4px;}
-.offer-title .name{display:flex;align-items:center;justify-content:center;gap:10px;font-size:clamp(24px,4.6vw,34px);font-weight:800;letter-spacing:.02em;color:var(--ink);line-height:1.05;text-transform:uppercase;}
-.offer-title .name b{color:var(--accent);}
-.offer-title .toggle{display:inline-block;width:36px;height:20px;background:var(--accent);border-radius:20px;position:relative;flex-shrink:0;}
-.offer-title .toggle:before{content:"";position:absolute;right:2.5px;top:2.5px;width:15px;height:15px;background:#fff;border-radius:50%;}
+
 
 .offer-divider{border:0;border-top:2px dashed #d4d4d4;margin:22px 0;}
 
@@ -392,6 +387,14 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 .opt-clean.bad .title-op{color:var(--red);}
 .opt-clean.good .title-op{color:var(--green);}
 .opt-clean p{color:#3a372f;font-size:15.5px;line-height:1.6;margin:0;}
+
+.offer-title{text-align:center;margin-bottom:6px;line-height:1.05;}
+.offer-title .line-1{font-size:clamp(20px,4.2vw,28px);font-weight:800;letter-spacing:.08em;color:var(--ink);text-transform:uppercase;}
+.offer-title .line-2{font-size:clamp(24px,5vw,34px);font-weight:800;letter-spacing:.04em;color:var(--ink);text-transform:uppercase;margin-top:4px;}
+.offer-title .line-2 b{color:var(--accent);font-weight:800;}
+
+/* Mockup com proporção 1:1 fixa (arquivo é 1400x1400) */
+.offer-mock img{aspect-ratio:1/1;object-fit:contain;}
 </style>
 </head>
 <body>
@@ -669,14 +672,13 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 
     <div class="offer-hero">
       <div class="offer-mock">
-        <span class="aprovado-ribbon">Aprovado</span>
-        <img src="product-mockup.jpg" width="1100" height="900" alt="12 Teses Jurídicas Esquecidas" loading="lazy" decoding="async">
+        <img src="product-mockup.jpg" width="1400" height="1400" alt="12 Teses Jurídicas Esquecidas" loading="lazy" decoding="async">
       </div>
 
       <div class="offer-card">
         <div class="offer-title">
-          <span class="k">As 12 Teses</span>
-          <span class="name"><b>Jurídicas</b> Esquecidas <span class="toggle"></span></span>
+          <div class="line-1">AS 12 TESES</div>
+          <div class="line-2"><b>JURÍDICAS</b> ESQUECIDAS</div>
         </div>
         <hr class="offer-divider">
         <p class="offer-from">De <span class="strike">R$ 482,00</span> por:</p>
@@ -781,14 +783,13 @@ footer .fl{color:#eae2d2;font-weight:700;letter-spacing:.14em;text-transform:upp
 
     <div class="offer-hero">
       <div class="offer-mock">
-        <span class="aprovado-ribbon">Aprovado</span>
-        <img src="product-mockup.jpg" width="1100" height="900" alt="12 Teses Jurídicas Esquecidas" loading="lazy" decoding="async">
+        <img src="product-mockup.jpg" width="1400" height="1400" alt="12 Teses Jurídicas Esquecidas" loading="lazy" decoding="async">
       </div>
 
       <div class="offer-card">
         <div class="offer-title">
-          <span class="k">As 12 Teses</span>
-          <span class="name"><b>Jurídicas</b> Esquecidas <span class="toggle"></span></span>
+          <div class="line-1">AS 12 TESES</div>
+          <div class="line-2"><b>JURÍDICAS</b> ESQUECIDAS</div>
         </div>
         <hr class="offer-divider">
         <p class="offer-from">De <span class="strike">R$ 482,00</span> por:</p>
