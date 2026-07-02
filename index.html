@@ -22,6 +22,16 @@ const CHECKOUT_URL = "https://pay.hotmart.com/B106568348T";
 
 var hotmartReady = false;
 
+// Persiste UTMs em sessionStorage assim que a LP carrega (sobrevive a redirects)
+(function persistUTMs(){
+  var qs = new URLSearchParams(location.search);
+  var utmKeys = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','utm_id','fbclid','gclid','src'];
+  utmKeys.forEach(function(k){
+    var v = qs.get(k);
+    if(v) sessionStorage.setItem('pg_'+k, v);
+  });
+})();
+
 function pgCheckout(e){
   if(e) e.preventDefault();
   if(window.fbq){
@@ -32,9 +42,15 @@ function pgCheckout(e){
       value:67.00, currency:'BRL'
     });
   }
-  var url = CHECKOUT_URL + '?src=lp-teses';
-  var fbclid = new URLSearchParams(location.search).get('fbclid');
-  if(fbclid) url += '&fbclid=' + encodeURIComponent(fbclid);
+  // Monta URL do checkout com src fixo + TODAS as UTMs persistidas
+  var params = new URLSearchParams();
+  params.set('src','lp-teses');
+  var utmKeys = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','utm_id','fbclid','gclid'];
+  utmKeys.forEach(function(k){
+    var v = sessionStorage.getItem('pg_'+k) || new URLSearchParams(location.search).get(k);
+    if(v) params.set(k, v);
+  });
+  var url = CHECKOUT_URL + '?' + params.toString();
   setTimeout(function(){ window.location.href = url; }, 300);
 }
 </script></body></html>

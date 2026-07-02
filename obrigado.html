@@ -489,13 +489,28 @@ form.addEventListener('submit', async (e) => {
   ];
   if (reuniao) linhas.push(`• Reunião com especialista: ${reuniao}`);
 
-  // utm capture
+  // UTM capture — prioriza sessionStorage (persistido da LP), fallback URL
   const qs = new URLSearchParams(location.search);
-  const utm_campaign = qs.get('utm_campaign') || '12-teses-obrigado';
-  const utm_source = qs.get('utm_source') || '';
-  const utm_medium = qs.get('utm_medium') || '';
-  if (utm_source || utm_medium) {
-    linhas.push('', `UTMs: source=${utm_source} | medium=${utm_medium}`);
+  function getUTM(k){
+    return sessionStorage.getItem('pg_'+k) || qs.get(k) || '';
+  }
+  const utm_campaign = getUTM('utm_campaign') || '12-teses-obrigado';
+  const utm_source = getUTM('utm_source');
+  const utm_medium = getUTM('utm_medium');
+  const utm_content = getUTM('utm_content');
+  const utm_term = getUTM('utm_term');
+  const utm_id = getUTM('utm_id');
+  const fbclid = getUTM('fbclid');
+  if (utm_source || utm_medium || utm_content) {
+    linhas.push('', 'UTMs:',
+      `  source: ${utm_source}`,
+      `  medium: ${utm_medium}`,
+      `  campaign: ${utm_campaign}`,
+      `  content: ${utm_content}`,
+      `  term: ${utm_term}`,
+      `  id: ${utm_id}`,
+      fbclid ? `  fbclid: ${fbclid}` : ''
+    );
   }
 
   const payload = {
