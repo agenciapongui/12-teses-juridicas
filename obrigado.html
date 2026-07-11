@@ -522,23 +522,25 @@ form.addEventListener('submit', async (e) => {
   const utm_term = getUTM('utm_term');
   const utm_id = getUTM('utm_id');
   const fbclid = getUTM('fbclid');
-  if (utm_source || utm_medium || utm_content) {
-    linhas.push('', 'UTMs:',
-      `  source: ${utm_source}`,
-      `  medium: ${utm_medium}`,
-      `  campaign: ${utm_campaign}`,
-      `  content: ${utm_content}`,
-      `  term: ${utm_term}`,
-      `  id: ${utm_id}`,
-      fbclid ? `  fbclid: ${fbclid}` : ''
-    );
+  // UTMs agora vão em campos próprios (utm_source, utm_medium…) e alimentam a
+  // aba Inteligência — não são mais despejadas na mensagem/nota.
+  // fbclid/utm_id (sem coluna dedicada) ficam na nota só como referência.
+  if (fbclid || utm_id) {
+    linhas.push('', `Ref.: ${[utm_id && 'utm_id='+utm_id, fbclid && 'fbclid='+fbclid].filter(Boolean).join(' | ')}`);
   }
 
   const payload = {
     nome,
     telefone: whatsapp,
     email,
-    origem: 'Página de obrigado · 12 Teses Jurídicas',
+    origem: 'LT - 12 Teses',            // marca automática da origem no CRM
+    labels: 'LT - 12 Teses',            // etiqueta (o CRM cria se não existir)
+    // UTMs em campos próprios → alimentam a aba Inteligência (não ficam soltas na nota)
+    utm_source,
+    utm_medium,
+    utm_campaign,
+    utm_content,
+    utm_term,
     campaign: utm_campaign,
     mensagem: linhas.join('\n'),
   };
